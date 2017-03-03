@@ -18,17 +18,6 @@ $this->title = 'My Yii Application';
             ?>
         </h1>
         <p class="lead">Hola Nen!</p>
-        <?php
-            // danis bd // date('2017-09-08 00:00:01 O'),
-
-            echo Countdown::widget([
-                'datetime' => date('2017-03-03 15:24:01'),
-                'format' => '%-m months %-W weeks %-d days %-H h %M min %S sec',
-                'events' => [
-                    // 'finish' => 'function(){location.reload()}',
-                ],
-            ]);
-        ?>
 
         <?php
             /*

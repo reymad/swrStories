@@ -4,7 +4,9 @@
 /* @var $content string */
 
 use app\assets\FrontAsset;
+use kartik\icons\Icon;
 use kartik\widgets\Growl;
+use russ666\widgets\Countdown;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -51,7 +53,6 @@ FrontAsset::register($this);
     <?php
         echo $this->render('_menu');
     ?>
-
     <!--
     <div class="container pic-container">
         <?php /*echo Html::img($this->context->imagesUrl.'forest.jpg',[])*/ ?>
@@ -59,6 +60,21 @@ FrontAsset::register($this);
     -->
 
     <div class="container">
+
+        <div class="countdown fright">
+            <?php
+                echo Icon::show('birthday-cake', ['class'=>'fa-xl text-sunset'] );
+                echo '&nbsp;&nbsp;';
+                echo Countdown::widget([
+                    'datetime' => date('2017-09-08 00:00:00'),
+                    'format' => '%-m m %-W w %-d d &middot; %-H h %M min %S sec',
+                    'events' => [
+                        // 'finish' => 'function(){location.reload()}',
+                    ],
+                ]);
+            ?>
+        </div>
+
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>

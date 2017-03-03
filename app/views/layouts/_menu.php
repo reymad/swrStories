@@ -8,6 +8,7 @@
 use app\components\Helpers;
 use kartik\icons\Icon;
 use mdm\admin\components\MenuHelper;
+use russ666\widgets\Countdown;
 use yii\bootstrap\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
@@ -57,6 +58,17 @@ if(Yii::$app->user->isGuest){
                         . Html::endForm()
                         . '</li>';
     $menu = \yii\helpers\ArrayHelper::merge($menu, $logoutItem);
+
+    /* conutdown in menu
+    $countdown[] = '<li>' . Icon::show('birthday-cake', ['class'=>'fa-x6 text-sunset'] ) .  '&nbsp;&nbsp;' . Countdown::widget([
+            'datetime' => date('2017-09-08 00:00:00'),
+            'format' => '%-m m %-W w %-d d %-H h %M min %S sec',
+            'events' => [
+                // 'finish' => 'function(){location.reload()}',
+            ],
+        ]) . '</li>';
+    $menu = \yii\helpers\ArrayHelper::merge($menu, $countdown);
+    */
 
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
