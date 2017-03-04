@@ -63,15 +63,8 @@ Icon::map($this,Icon::FA);
 
         <div class="countdown fright">
             <?php
-                echo Icon::show('birthday-cake', ['class'=>'fa-6x text-sunset'] );
-                echo '&nbsp;&nbsp;';
-                echo Countdown::widget([
-                    'datetime' => date('2017-09-08 00:00:00'),
-                    'format' => '%-m m %-W w %-d d &middot; %-H h %M min %S sec',
-                    'events' => [
-                        // 'finish' => 'function(){location.reload()}',
-                    ],
-                ]);
+                // echo Icon::show('birthday-cake', ['class'=>'fa-6x text-sunset'] );
+                // echo '&nbsp;&nbsp;';
             ?>
         </div>
 
