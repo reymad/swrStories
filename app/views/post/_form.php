@@ -21,7 +21,9 @@ use yii\widgets\ActiveForm;
     <?php
         // echo $form->field($model, 'lang')->listBox(['es-ES'=>'Español','en-US'=>'English'])
         // echo Html::activeDropDownList($model, 'lang',['es-ES'=>'Español','en-US'=>'English']);
-        $model->lang = Yii::$app->language;
+        if($model->isNewRecord){
+            $model->lang = Yii::$app->language;
+        }
         echo $form->field($model, 'lang')->widget(Select2::classname(), [
             'data' => ['es-ES'=>'Español','en-US'=>'English'],
             'language' => Yii::$app->language,
