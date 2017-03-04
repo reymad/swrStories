@@ -145,9 +145,22 @@ class SiteController extends MyController
         // fetch the facebook sdk api
         $facebook = $social->getFbApi();
         */
+        if(
+            Yii::$app->user->can('permisos_danielle')
+            // || Yii::$app->user->can('permisos_admin')
+        ){
+            return
+                $this->render('timeline_dani');
+        }
+        else if(Yii::$app->user->can('permisos_usuario')){
+            return
+                $this->render('timeline_user');
+        }else{
+            return
+                $this->render('index');
+        }
 
 
-        return $this->render('index');
     }
 
     /**

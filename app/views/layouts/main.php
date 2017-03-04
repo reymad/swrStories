@@ -8,12 +8,12 @@ use kartik\icons\Icon;
 use kartik\widgets\Growl;
 use russ666\widgets\Countdown;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
 
 FrontAsset::register($this);
+// mapeamos Font-awesome
+Icon::map($this,Icon::FA);
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -63,7 +63,7 @@ FrontAsset::register($this);
 
         <div class="countdown fright">
             <?php
-                echo Icon::show('birthday-cake', ['class'=>'fa-xl text-sunset'] );
+                echo Icon::show('birthday-cake', ['class'=>'fa-6x text-sunset'] );
                 echo '&nbsp;&nbsp;';
                 echo Countdown::widget([
                     'datetime' => date('2017-09-08 00:00:00'),

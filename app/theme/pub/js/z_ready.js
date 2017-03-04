@@ -4,18 +4,13 @@
  */
 $(document).ready(function(){
 
-    console.log('app.js');
+    console.log('hello nen!');
 
     // comment here
     fun();
 
-    tellWidth($('.tellWidth'));
-
-    console.log('hola yoseff');
-
-    //
+    /*
     var to = setInterval(function(){
-
         $('div.transition')
             .slideToggle('slow')
             .promise()
@@ -25,29 +20,27 @@ $(document).ready(function(){
 
         intervalCounter++;
         if(intervalCounter>5){ clearInterval(to); }
-
     }, 2000);
-
-
-    // $.blockUI(growlUIconfig);
-   //  $.blockUI({})
-
+    $.blockUI(growlUIconfig);
+    $.blockUI({})
+    */
 
 });
 
+/*
 $(window).on('resize', function(){
-
     $.each($('.tellWidth'), function(){
         tellWidth($(this));
     });
-
 });
-
+*/
+/*
 $(window).on('click', function(){
     $.unblockUI();
 });
+*/
 
-$(document).ajaxStart(ajaxStart).ajaxStop(ajaxStop);
+// $(document).ajaxStart(ajaxStart).ajaxStop(ajaxStop);
 
 /*
 * fin ready

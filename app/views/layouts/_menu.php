@@ -42,7 +42,6 @@ if(Yii::$app->user->isGuest){
 
     // si estamos logados por red social pintamos iconito
     $social = Helpers::getSocialConnected();
-    Icon::map($this,Icon::FA);
     $socialIcon = (!$social) ? '' : Icon::show($social, ['class'=>'social-icon'/*'fa-lg'*/] );
 
     // var_dump($socialIcon); exit;

@@ -33,7 +33,7 @@ class PostController extends MyController
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index','view','update','delete','activate','create'],
+                        'actions' => ['index','update','delete','activate','create'],
                         'roles' => ['updatePost','createPost'],
                     ],
                 ]
