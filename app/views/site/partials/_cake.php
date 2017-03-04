@@ -169,12 +169,13 @@ https://twitter.com/marco_bf
     <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
 </svg>
 <div class="text">
-    <h1><?=Yii::t('app','site.time.left')?></h1>
+    <h2 class="text-grey-light"><?=Yii::t('app','site.time.left')?></h2>
     <p>
         <?php
             echo Countdown::widget([
                 'datetime' => date('2017-09-08 00:00:00'),
-                'format' => '%-m m %-W w %-d d &middot; %-H h %M min %S sec',
+                //'format' => '%-m ' .Yii::t('app','cake.months'). ' %-W ' .Yii::t('app','cake.weeks'). ' %-d ' .Yii::t('app','cake.days'). ' &middot; %-H h. %M min. %S s.',
+                'format' => '<i>%-m</i> ' .Yii::t('app','cake.months'). ' <i>%-W</i> ' .Yii::t('app','cake.weeks'). ' <i>%-d</i> ' .Yii::t('app','cake.days'). ' &middot; <i>%-H</i> h. <i>%-M</i> min. <i>%S</i> s.',
                 'events' => [
                     // 'finish' => 'function(){location.reload()}',
                 ],

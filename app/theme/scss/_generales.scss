@@ -1,4 +1,6 @@
-
+.bold{
+  font-weight: bolder;
+}
 .fleft{
   float: left;
 }
@@ -44,15 +46,121 @@ img{
     height: auto;
   }
 }
+.pointer{
+  cursor: pointer;
+}
+h1{
+  font-size:48px !important;
+}
+
 .text-corp{ color: $color-corp;  }
 .text-corp-dark{ color: $color-corp-dark;  }
 .text-sunset{ color: $color-sunset;  }
 .text-sunset-dark{ color: $color-sunset-dark;  }
 .text-grey{ color: $color-font;  }
+.text-font{ color: $color-font;  }
 .text-grey-light{ color: $color-font-light;  }
+.text-font-light{ color: $color-font-light;  }
+.text-grey-dark{ color: $color-font-light;  }
 
 div.spacer{
   margin: 2em 0;
 }
+.separador{
+  margin: 10px auto 15px auto;
+  height: 4px;
+  background: $color-sunset;
+  width:6%;
+}
 
+.bloque{
+  margin: 2em 0;
+  line-height: 28px;
+
+  ol#list-steps{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    li{
+      line-height: 24px;
+      margin: 10px 0;
+    }
+  }
+
+  .question{
+    margin: 0 0 20px;
+    font-size: 48px;
+    font-weight: 200;
+    color: $color-grey-dark;
+  }
+
+  &.bloque-darker{
+    width: 100% !important;
+    background: $color-grey-darker;
+    //padding: 75px 0;
+    padding: 65px 0;
+  }
+
+}
+ol#list-steps {
+  list-style: none; counter-reset: li;
+  li {counter-increment: li}
+  li::before {
+    content: counter(li); color: red;
+    display: inline-block; width: 1em; margin-left: -1.5em;
+    margin-right: 0.5em; text-align: right; direction: rtl;
+  }
+
+}
+
+/*
+  p {
+    @include font-size(20px);
+  }
+
+  .transition{
+    border: 1px solid $color-black;
+    padding: 1em;
+    background: $color-white;
+    @include transition(background .8s ease);
+    &:hover{
+      background: $color-grey;
+      cursor: pointer;
+    }
+
+  }
+
+  // animation frames
+  @include keyframes(slide-down) {
+    0% { opacity: 1; }
+    90% { opacity: 0; }
+  }
+  .animated {
+    width: 100px;
+    height: 100px;
+    background: black;
+    @include animation('slide-down 5s 3');
+  }
+
+  .sidebar {
+    height: 60px;
+    // background: $color-black;
+    width: 60%;
+    float: left;
+    background: $color-black;
+    color: $color-white;
+    @include font-size(25px);
+    text-align: center;
+    margin: 0 2% 0 0;
+    @include bp-small {
+      width: 100%;
+      float: none;
+      margin: 0;
+    }//
+  }
+
+  .container-with-floated-children {
+    @extend %clearfix;
+  }
+  */
 

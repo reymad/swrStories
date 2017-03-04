@@ -9,6 +9,13 @@ $(document).ready(function(){
     // comment here
     fun();
 
+    $('.scrollto').on('click', function(){
+        $('html, body').animate({
+            scrollTop: $($(this).attr('data-scrollto')).offset().top
+        }, 2000);
+    });
+
+
     /*
     var to = setInterval(function(){
         $('div.transition')

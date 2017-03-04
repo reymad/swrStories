@@ -59,6 +59,9 @@ $fuente_italic: 'Futura LT W01 Medium Oblique';
 $fuente_medium: 'Futura LT W01 Medium';
 */
 @import url(http://fonts.googleapis.com/css?family=Lato:300italic);
+.bold {
+  font-weight: bolder; }
+
 .fleft {
   float: left; }
 
@@ -102,6 +105,12 @@ img.responsive {
   width: 100%;
   height: auto; }
 
+.pointer {
+  cursor: pointer; }
+
+h1 {
+  font-size: 48px !important; }
+
 .text-corp {
   color: #15AC9B; }
 
@@ -117,24 +126,125 @@ img.responsive {
 .text-grey {
   color: #525252; }
 
+.text-font {
+  color: #525252; }
+
 .text-grey-light {
-  color: #ccc; }
+  color: #aeaeae; }
+
+.text-font-light {
+  color: #aeaeae; }
+
+.text-grey-dark {
+  color: #aeaeae; }
 
 div.spacer {
   margin: 2em 0; }
 
+.separador {
+  margin: 10px auto 15px auto;
+  height: 4px;
+  background: #f4645f;
+  width: 6%; }
+
+.bloque {
+  margin: 2em 0;
+  line-height: 28px; }
+  .bloque ol#list-steps {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left; }
+    .bloque ol#list-steps li {
+      line-height: 24px;
+      margin: 10px 0; }
+  .bloque .question {
+    margin: 0 0 20px;
+    font-size: 48px;
+    font-weight: 200;
+    color: #777; }
+  .bloque.bloque-darker {
+    width: 100% !important;
+    background: #f0f2f1;
+    padding: 65px 0; }
+
+ol#list-steps {
+  list-style: none;
+  counter-reset: li; }
+  ol#list-steps li {
+    counter-increment: li; }
+  ol#list-steps li::before {
+    content: counter(li);
+    color: red;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl; }
+
+/*
+  p {
+    @include font-size(20px);
+  }
+
+  .transition{
+    border: 1px solid $color-black;
+    padding: 1em;
+    background: $color-white;
+    @include transition(background .8s ease);
+    &:hover{
+      background: $color-grey;
+      cursor: pointer;
+    }
+
+  }
+
+  // animation frames
+  @include keyframes(slide-down) {
+    0% { opacity: 1; }
+    90% { opacity: 0; }
+  }
+  .animated {
+    width: 100px;
+    height: 100px;
+    background: black;
+    @include animation('slide-down 5s 3');
+  }
+
+  .sidebar {
+    height: 60px;
+    // background: $color-black;
+    width: 60%;
+    float: left;
+    background: $color-black;
+    color: $color-white;
+    @include font-size(25px);
+    text-align: center;
+    margin: 0 2% 0 0;
+    @include bp-small {
+      width: 100%;
+      float: none;
+      margin: 0;
+    }//
+  }
+
+  .container-with-floated-children {
+    @extend %clearfix;
+  }
+  */
 #envelope {
   background: #f4645f;
   width: 300px;
   height: 200px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -150px;
-  margin-top: -50px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); }
+  position: relative;
+  margin: 12em auto 0 auto;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer; }
+
+.letter-content {
+  position: relative;
+  top: 50px;
+  left: 65px; }
 
 #lid {
   position: relative;
@@ -190,10 +300,22 @@ div.spacer {
 #cake {
   display: block;
   position: relative;
-  margin: -19em auto 0 auto; }
+  margin: -10em auto 0 auto; }
 
 /* ============================================== Candle
 */
+.wrap-cake {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  top: -235px;
+  margin-bottom: -235px; }
+  .wrap-cake b {
+    color: #f4645f; }
+  .wrap-cake i {
+    font-style: normal !important;
+    color: #f4645f; }
+
 .velas {
   background: #ffffff;
   border-radius: 10px;
@@ -299,57 +421,7 @@ body.front {
   background-color: transparent; }
 
 .site {
-  /* header partial | comment */
-  /*
-  p {
-    @include font-size(20px);
-  }
-
-  .transition{
-    border: 1px solid $color-black;
-    padding: 1em;
-    background: $color-white;
-    @include transition(background .8s ease);
-    &:hover{
-      background: $color-grey;
-      cursor: pointer;
-    }
-
-  }
-
-  // animation frames
-  @include keyframes(slide-down) {
-    0% { opacity: 1; }
-    90% { opacity: 0; }
-  }
-  .animated {
-    width: 100px;
-    height: 100px;
-    background: black;
-    @include animation('slide-down 5s 3');
-  }
-
-  .sidebar {
-    height: 60px;
-    // background: $color-black;
-    width: 60%;
-    float: left;
-    background: $color-black;
-    color: $color-white;
-    @include font-size(25px);
-    text-align: center;
-    margin: 0 2% 0 0;
-    @include bp-small {
-      width: 100%;
-      float: none;
-      margin: 0;
-    }//
-  }
-
-  .container-with-floated-children {
-    @extend %clearfix;
-  }
-  */ }
+  /* header partial | comment */ }
   .site nav#main-header {
     background-color: #fff;
     border: 0;

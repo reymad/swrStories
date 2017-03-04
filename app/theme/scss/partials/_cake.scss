@@ -3,11 +3,28 @@
 #cake {
   display: block;
   position: relative;
-  margin: -19em auto 0 auto;
+  margin: -10em auto 0 auto;
 }
 
 /* ============================================== Candle
 */
+
+.wrap-cake{
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  top:-235px;
+  margin-bottom: -235px;
+  //border:1px solid red;
+  b{
+    color: $color-sunset;
+    // font-size: 20px;
+  }
+  i{
+    font-style: normal !important;
+    color: $color-sunset;
+  }
+}
 
 .velas {
   background: #ffffff;

@@ -11,59 +11,61 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>
-            <?php
-                // tarta
-                // echo Icon::show('birthday-cake', ['class'=>'fa-6 text-sunset'] );
-            ?>
+        <h1 class="bold">
+            <?=Yii::t('app','site.index.welcome')?>
         </h1>
-        <p class="lead">Hola Nen!</p>
+    </div>
 
-        <?php
-            /*
-            if(isset(Yii::$app->user->identity->accounts['twitter'])){
-             $data = Yii::$app->user->identity->accounts['twitter']->decodedData;
-             $screen_name = $data['screen_name'];
-             // $id = $data['id_str'];
+    <div class="timeline users text-center">
+        <div class="wrap-cake">
+            <?= Yii::$app->view->render('partials/_cake') ?>
+        </div>
+    </div>
 
-             // var_dump($data);exit;
+</div>
+<div class="body-content clear">
 
-             echo TwitterPlugin::widget([
-                 'type' => TwitterPlugin::TIMELINE,
-                 'screenName' => $screen_name,
-                 'timelineConfig' => ['search' => '#chronoscan'],
-                 'settings' => ['widget-id' =>  '836954715543990274'],
-                 // 'options' => ['height'=>'350', 'width'=>'500']
-                 // 'content' => 'tweets content'
-             ]);
-            */
-         ?>
+    <div class="bloque text-center bloque-darker">
+        <div class="container">
+            <div class="bloque text-center">
+                <?=Yii::t('app','site.thanks')?>
+                <br><br>
+                <?=Yii::t('app','site.thanks.2')?>
+                <br><br>
+                <?=Yii::t('app','site.thanks.3')?>
+            </div>
+            <div class="text-center">
+                <?= Icon::show('arrow-circle-o-down', ['class'=>'fa-2x text-grey scrollto pointer text-grey-dark','data-scrollto'=>'#question'] )?>
+            </div>
+        </div>
+    </div>
 
-         <!-- my widget @https://twitter.com/settings/widgets/836954715543990274/edit
-         <a class="twitter-timeline"  href="https://twitter.com/hashtag/interesante" data-widget-id="836954715543990274">#interesante Tweets</a>
-         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-         -->
-         <?php
-            /*
-            }// fin if twitter
-            */
-        ?>
+    <div class="container">
+
+        <div id="question" class="bloque">
+            <h3 class="question">
+                <?=Yii::t('app','site.como-funciona.question')?>
+            </h3>
+            <h3 class="text-grey-light"><?=Yii::t('app','site.como-funciona.question-answer')?></h3>
+            <br>
+            <ol id="list-steps">
+                <li><?=Yii::t('app','site.como-funciona.question-answer.1')?></li>
+                <li><?=Yii::t('app','site.como-funciona.question-answer.2')?></li>
+                <li><?=Yii::t('app','site.como-funciona.question-answer.3')?></li>
+                <li><?=Yii::t('app','site.como-funciona.question-answer.4')?></li>
+            </ol>
+        </div>
+
+        <div class="bloque">
+            <?= Yii::$app->view->render('partials/_envelope') ?>
+        </div>
+
+    </div>
+
+
+
+
+
 
 </div>
 
-<div class="body-content">
-
-<div class="row">
- <div class="col-lg-4">
-
- </div>
- <div class="col-lg-4">
-
- </div>
- <div class="col-lg-4">
-
- </div>
-</div>
-
-</div>
-</div>

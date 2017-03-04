@@ -6,11 +6,16 @@
  * Time: 10:46
  */
 ?>
-<div id="envelope">
-    <div id="lid"></div>
-    <div id="letter">
-        @add content here...
+<a href="/user/register">
+    <div id="envelope">
+        <div id="lid"></div>
+        <div id="letter">
+            <div class="letter-content">
+                <?=Yii::t('app','sobre.escribir')?>
+            </div>
+        </div>
+        <div id="left-corner"></div>
+        <div id="right-corner"></div>
     </div>
-    <div id="left-corner"></div>
-    <div id="right-corner"></div>
-</div>
+
+</a>

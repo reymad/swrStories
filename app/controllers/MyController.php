@@ -17,6 +17,8 @@ class MyController extends Controller
 
     public $imagesUrl = '/assets/dist/images/';
 
+    public $container = true;
+
     /*
     public function afterAction($action, $result)
     {

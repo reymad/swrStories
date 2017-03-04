@@ -67,7 +67,8 @@ Icon::map($this,Icon::FA);
                 // echo '&nbsp;&nbsp;';
             ?>
         </div>
-
+    </div>
+    <div class="content <?php if( isset($this->context->container) && $this->context->container===false ) echo ''; else echo 'container'; ?>">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
@@ -77,9 +78,8 @@ Icon::map($this,Icon::FA);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">&copy; Jesús Rey <?= date('Y') ?></p>
+        <p class="pull-right"><?= Yii::t('yii', 'Powered by {yii}',['yii' => Icon::show('heart', ['class'=>'text-sunset'] )]) ?></p>
     </div>
 </footer>
 

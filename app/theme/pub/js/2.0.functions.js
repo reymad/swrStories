@@ -19,6 +19,7 @@ $(window).on("scroll", function () {
     }
 });
 
+
 /*
  * fin function.js
  * */

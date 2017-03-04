@@ -108,7 +108,6 @@ class SiteController extends MyController
      */
     public function actionIndex()
     {
-
         // siempre que inicialicemos cadenas así, el MyController las publicará en js
         $this->_translations['app.hola-mundo']  = Yii::t('app','Hola Mundo!!');
         // var_dump(Yii::$app->params['social_client']); exit;
@@ -156,6 +155,7 @@ class SiteController extends MyController
             return
                 $this->render('timeline_user');
         }else{
+            $this->container=false;// no quiero container class en index
             return
                 $this->render('index');
         }
