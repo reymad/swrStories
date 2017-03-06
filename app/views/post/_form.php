@@ -11,7 +11,20 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model app\models\Post */
 /* @var $form yii\widgets\ActiveForm */
+
+/*
+<select>
+    <option style="font-family : Arial">Arial</option>
+    <option style="font-family : Courier">Courier</option>
+    <option style="font-family : Tahoma">Tahoma</option>
+    <option style="font-family : 'Times New Roman'">Times New Roman</option>
+    <option style="font-family : Verdana">Verdana</option>
+    <option style="font-family : 'Comic Sans MS'">Comic Sans</option>
+</select>
+*/
+
 ?>
+
 
 <div class="post-form">
 

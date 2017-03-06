@@ -56,21 +56,11 @@ Icon::map($this,Icon::FA);
     <?php
         echo $this->render('_menu');
     ?>
-    <!--
-    <div class="container pic-container">
-        <?php /*echo Html::img($this->context->imagesUrl.'forest.jpg',[])*/ ?>
-    </div>
-    -->
 
-    <div class="container">
-
-        <div class="countdown fright">
-            <?php
-                // echo Icon::show('birthday-cake', ['class'=>'fa-6x text-sunset'] );
-                // echo '&nbsp;&nbsp;';
-            ?>
-        </div>
+    <div class="collage">
+        <?php /* echo Html::img($this->context->imagesUrl.'collage1.jpg',['class'=>'img img-responsive']); */ ?>
     </div>
+
     <div class="content <?php if( isset($this->context->container) && $this->context->container===false ) echo ''; else echo 'container'; ?>">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

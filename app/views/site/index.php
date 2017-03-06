@@ -34,11 +34,11 @@ $this->title = 'My Yii Application';
                 <br>&middot;<br>
                 <?=Yii::t('app','site.thanks.3')?>
             </div>
-            <!--
-            <div class="text-center">
-                <?php /* echo Icon::show('arrow-circle-o-down', ['class'=>'fa-2x text-grey scrollto pointer text-grey-dark','data-scrollto'=>'#question'] ) */ ?>
+
+            <div class="album">
+                <?= Yii::$app->view->render('partials/_album') ?>
             </div>
-            -->
+
         </div>
     </div>
 

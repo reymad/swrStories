@@ -192,7 +192,6 @@ ol#list-steps {
     padding-right: 10px; }
 
 /*
-
 ol#list-steps>li:before {
   position: absolute;
   top: -.5em;
@@ -264,19 +263,43 @@ ol#list-steps>li:before {
     @extend %clearfix;
   }
   */
+.collage {
+  margin-top: 60px;
+  background: url("/assets/dist/images/collage1.jpg");
+  background-repeat: repeat-x;
+  height: 88px;
+  opacity: 0.8;
+  max-width: 100%; }
+
+.cc_container .cc_btn, .cc_container .cc_btn:visited {
+  color: #fff !important;
+  background-color: #15AC9B !important;
+  transition: background 200ms ease-in-out,color 200ms ease-in-out,box-shadow 200ms ease-in-out;
+  -webkit-transition: background 200ms ease-in-out,color 200ms ease-in-out,box-shadow 200ms ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px; }
+
+/*
 #envelope {
-  background: #f4645f;
+  background: $color-sunset;
   width: 300px;
   height: 200px;
   position: relative;
-  margin: 12em auto 0 auto;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-  cursor: pointer; }
+  // left: 50%;
+  // top: 50%;
+  // margin-left: -150px;
+  margin:12em auto 0 auto;
+  //border-bottom-left-radius: 20px;
+  //border-bottom-right-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
 
-.letter-content {
+.letter-content{
   position: relative;
   top: 50px;
-  left: 65px; }
+  left: 65px;
+}
 
 #lid {
   position: relative;
@@ -285,19 +308,88 @@ ol#list-steps>li:before {
   height: 0px;
   border-style: solid;
   border-width: 0 150px 150px 150px;
-  border-color: transparent transparent #f4645f transparent; }
+  border-color: transparent transparent $color-sunset transparent;
+
+}
 
 #letter {
   position: relative;
-  background: #fafafa;
+  background: $color-grey-lightest;
   top: -150px;
   width: 280px;
   height: 200px;
   left: 10px;
   top: -220px;
   animation: out 5s infinite linear;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  overflow:hidden;
+}
+
+#left-corner {
+  position: relative;
+  top: -315px;
+  left: 10px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 150px 0 0 250px;
+  border-color: transparent transparent transparent $color-sunset;
+
+}
+
+#right-corner {
+  position: relative;
+  top: -470px;
+  left: 50px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 0 150px 250px;
+  border-color: transparent transparent $color-sunset transparent;
+}
+
+@keyframes out {
+  0% {top: -220px;}
+  25% {top: -200px;}
+  50% {top: -220px;}
+  75% {top: -200px;}
+}
+*/
+/* original ^ */
+#envelope {
+  background: #f4645f;
+  width: 260px;
+  height: 170px;
+  position: relative;
+  margin: 10em auto 0 auto;
+  box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer; }
+
+.letter-content {
+  position: relative;
+  top: 50px; }
+
+#lid {
+  position: relative;
+  top: -130px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 130px 130px 130px;
+  border-color: transparent transparent #f4645f transparent; }
+
+#letter {
+  position: relative;
+  background: #fafafa;
+  top: -150px;
+  width: 240px;
+  height: 200px;
+  left: 10px;
+  top: -220px;
+  animation: out 5s infinite linear;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
 
 #left-corner {
   position: relative;
@@ -312,7 +404,7 @@ ol#list-steps>li:before {
 #right-corner {
   position: relative;
   top: -470px;
-  left: 50px;
+  left: 6px;
   width: 0px;
   height: 0px;
   border-style: solid;
@@ -426,6 +518,32 @@ ol#list-steps>li:before {
   text-align: center; }
   .text h1 {
     font-size: 2em; }
+
+section.album {
+  margin: 50px auto;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; }
+  section.album div {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.5); }
+  section.album div:nth-child(1) {
+    background: #fce5cd;
+    transform-origin: left center;
+    transition: 2s;
+    z-index: 3; }
+  section.album div:nth-child(2) {
+    background: #fafafa;
+    transform-origin: left center;
+    transition: 2s;
+    z-index: 2; }
+  section.album div.portada_clicked {
+    transform: rotateY(-180deg);
+    background: #ddd; }
 
 body.front {
   margin: 0;

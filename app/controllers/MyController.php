@@ -15,7 +15,7 @@ use yii\web\Controller;
 class MyController extends Controller
 {
 
-    public $imagesUrl = '/assets/dist/images/';
+    // public $imagesUrl = '/assets/dist/images/';
 
     public $container = true;
 

@@ -1,3 +1,4 @@
+
 .bold{
   font-weight: bolder;
 }
@@ -130,9 +131,7 @@ ol#list-steps {
   }
 
 }
-
 /*
-
 ol#list-steps>li:before {
   position: absolute;
   top: -.5em;
@@ -154,6 +153,7 @@ ol#list-steps>li:before {
 
 }
 */
+
 
 
 /*
@@ -206,4 +206,22 @@ ol#list-steps>li:before {
     @extend %clearfix;
   }
   */
+
+.collage{
+  margin-top: 60px;
+  background: url($ruta-images + 'collage1.jpg');
+  background-repeat: repeat-x;
+  height: 88px;
+  opacity: 0.8;
+  max-width: 100%;
+}
+
+.cc_container .cc_btn, .cc_container .cc_btn:visited {
+  color: $color-white !important;
+  background-color: $color-corp !important;
+  transition: background 200ms ease-in-out,color 200ms ease-in-out,box-shadow 200ms ease-in-out;
+  -webkit-transition: background 200ms ease-in-out,color 200ms ease-in-out,box-shadow 200ms ease-in-out;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
 
