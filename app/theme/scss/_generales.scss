@@ -50,7 +50,16 @@ img{
   cursor: pointer;
 }
 h1{
-  font-size:48px !important;
+  // font-size:48px !important;
+  font-size: xx-large;
+  font-weight: 100;
+}
+h2,h3,h4{
+  font-weight: 100;
+}
+.jumbotron h1, .jumbotron .h1{
+  // font-size: xx-large;
+  font-weight: 100;
 }
 
 .text-corp{ color: $color-corp;  }
@@ -89,7 +98,7 @@ div.spacer{
 
   .question{
     margin: 0 0 20px;
-    font-size: 48px;
+    // font-size: 48px;
     font-weight: 200;
     color: $color-grey-dark;
   }
@@ -102,16 +111,50 @@ div.spacer{
   }
 
 }
+
 ol#list-steps {
   list-style: none; counter-reset: li;
   li {counter-increment: li}
   li::before {
-    content: counter(li); color: red;
-    display: inline-block; width: 1em; margin-left: -1.5em;
-    margin-right: 0.5em; text-align: right; direction: rtl;
+    content: counter(li);
+    color: $color-sunset;
+    display: inline-block;
+    width: 2em;
+    margin-left: -2.5em;
+    margin-right: 0.5em;
+    text-align: right;
+    direction: rtl;
+    border: 2px solid $color-sunset;
+    border-radius: 50%;
+    padding-right: 10px;
   }
 
 }
+
+/*
+
+ol#list-steps>li:before {
+  position: absolute;
+  top: -.5em;
+  // font-family: "Open Sans",sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  left: -3.75em;
+  width: 2.25em;
+  height: 2.25em;
+  line-height: 2.25em;
+  text-align: center;
+  z-index: 9;
+  color: #00c4cc;
+  border: 2px solid #00c4cc;
+  border-radius: 50%;
+  content: counter(li-counter);
+  background-color: #ebeced;
+  counter-increment: li-counter;
+
+}
+*/
+
 
 /*
   p {

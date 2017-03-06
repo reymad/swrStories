@@ -268,6 +268,14 @@ class Helpers
 
     public static function getGuestMenu(){
 
+        if((Yii::$app->language=='en-US')){
+            $lang = 'EN';
+            $langItem = ['label' => /* Icon::show('es', [], Icon::FI) . */ 'Español', 'url' => Url::to([ '', 'lang' => 'es-ES']) ];
+        }else{
+            $lang = 'ES';
+            $langItem = ['label' => /* Icon::show('us', [], Icon::FI) . */ 'English', 'url' => Url::to([ '', 'lang' => 'en-US']) ];
+        }
+
         return
             Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
@@ -292,9 +300,9 @@ class Helpers
                         . '</li>'
                     ),
                     // IDIOMA MENU
-                    ['label' => Icon::show('globe', ['class'=>'social-icon'/*'fa-lg'*/] ) . ' ' . Yii::$app->language, 'items' => [
-                        ['label' => 'es-ES', 'url' => Url::current(['lang'=>'es-ES'])],
-                        ['label' => 'en-US', 'url' => Url::current(['lang'=>'en-US'])],
+                    ['label' => Icon::show('globe', ['class'=>'social-icon'/*'fa-lg'*/] ) . ' ' . $lang,
+                        'items' => [
+                        $langItem
                     ]],
                 ],
             ]);

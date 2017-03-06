@@ -11,7 +11,7 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1 class="bold">
+        <h1 class="">
             <?=Yii::t('app','site.index.welcome')?>
         </h1>
     </div>
@@ -29,23 +29,25 @@ $this->title = 'My Yii Application';
         <div class="container">
             <div class="bloque text-center">
                 <?=Yii::t('app','site.thanks')?>
-                <br><br>
+                <br>&middot;<br>
                 <?=Yii::t('app','site.thanks.2')?>
-                <br><br>
+                <br>&middot;<br>
                 <?=Yii::t('app','site.thanks.3')?>
             </div>
+            <!--
             <div class="text-center">
-                <?= Icon::show('arrow-circle-o-down', ['class'=>'fa-2x text-grey scrollto pointer text-grey-dark','data-scrollto'=>'#question'] )?>
+                <?php /* echo Icon::show('arrow-circle-o-down', ['class'=>'fa-2x text-grey scrollto pointer text-grey-dark','data-scrollto'=>'#question'] ) */ ?>
             </div>
+            -->
         </div>
     </div>
 
     <div class="container">
 
         <div id="question" class="bloque">
-            <h3 class="question">
+            <h1 class="question">
                 <?=Yii::t('app','site.como-funciona.question')?>
-            </h3>
+            </h1>
             <h3 class="text-grey-light"><?=Yii::t('app','site.como-funciona.question-answer')?></h3>
             <br>
             <ol id="list-steps">
@@ -61,10 +63,6 @@ $this->title = 'My Yii Application';
         </div>
 
     </div>
-
-
-
-
 
 
 </div>

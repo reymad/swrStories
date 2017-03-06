@@ -7,7 +7,7 @@
  */
 ?>
 <div class="timeline_users text-center">
-    <h1><?=Yii::t('app','timeline.users.wellcome',['username'=>Yii::$app->user->identity->username,])?></h1>
+    <h1><?=Yii::t('app','timeline.users.welcome',['username'=>Yii::$app->user->identity->username])?></h1>
 </div>
 
 

@@ -6,13 +6,13 @@
 use app\assets\FrontAsset;
 use kartik\icons\Icon;
 use kartik\widgets\Growl;
-use russ666\widgets\Countdown;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 
 FrontAsset::register($this);
 // mapeamos Font-awesome
 Icon::map($this,Icon::FA);
+// Icon::map($this,Icon::FI);
 
 ?>
 <?php $this->beginPage() ?>
@@ -26,16 +26,19 @@ Icon::map($this,Icon::FA);
     <?php $this->head() ?>
 </head>
 <body class="site front">
-<?php $this->beginBody() ?>
 
+<?php $this->beginBody() ?>
 
 <?php foreach (Yii::$app->session->getAllFlashes() as $message){ ?>
     <?php
+
+    // print_r($message);exit;
+
     echo Growl::widget([
-        'type' => (!empty($message['type'])) ? $message['type'] : 'danger',
-        'title' => (!empty($message['title'])) ? Html::encode($message['title']) : 'Title Not Set!',
-        'icon' => (!empty($message['icon'])) ? $message['icon'] : 'fa fa-info',
-        'body' => (!empty($message['message'])) ? Html::encode($message['message']) : 'Message Not Set!',
+        'type' => (!empty($message['type'])) ? $message['type'] : 'success',
+        'title' => (!empty($message['title'])) ? Html::encode($message['title']) : '',
+        'icon' => (!empty($message['icon'])) ? $message['icon'] : 'fa fa-smile-o',
+        'body' => (!empty($message['message'])) ? Html::encode($message['message']) : '',
         'showSeparator' => true,
         'delay' => 1, //This delay is how long before the message shows
         'pluginOptions' => [

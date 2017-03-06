@@ -7,7 +7,7 @@
  */
 return [
     /*site index*/
-    'site.index.welcome' => '¡Bienvenid@ al 30 cumpleaños de Danielle!',
+    'site.index.welcome' => '¡Bienvenid@ al 30<br> cumpleaños de Danielle!',
     'site.time.left' => 'Faltan...',
     'site.thanks' => '<h1 class="question">Muchas gracias por estar aquí</h1><br>
 Danielle cumple 30 añazos este 2017, y cómo es una buena chica (la mayoría de las veces)
@@ -25,8 +25,8 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
 
     'site.como-funciona.question-answer.1' => 'Esta web es privada y tiene un control de acceso, así que es necesario que primero os registréis (SignUp), con un nombre de usuario, email y contraseña es suficiente. (Se pedirá un email de confirmación).',
     'site.como-funciona.question-answer.2' => 'Una vez registrados ya podéis escribir a Danielle clicando donde ponga \'Felicitar a Danielle\' o \'Crear Post\'. ',
-    'site.como-funciona.question-answer.3' => 'Y voila!, habréis hecho a una persona maravillosa un poquito más feliz, gracias ;).',
-    'site.como-funciona.question-answer.4' => 'Si eres de los que le gusta ir al grano... clica sobre en el sobre:',
+    'site.como-funciona.question-answer.3' => 'Et voilà! Habréis hecho a una gran persona un poquito más feliz, ¡Gracias!.',
+    'site.como-funciona.question-answer.4' => 'Para registrarte y felicitar a Danielle clica en el sobre.',
 
     /*cake*/
     'cake.months' => 'M.',

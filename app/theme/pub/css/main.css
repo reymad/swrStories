@@ -109,7 +109,14 @@ img.responsive {
   cursor: pointer; }
 
 h1 {
-  font-size: 48px !important; }
+  font-size: xx-large;
+  font-weight: 100; }
+
+h2, h3, h4 {
+  font-weight: 100; }
+
+.jumbotron h1, .jumbotron .h1 {
+  font-weight: 100; }
 
 .text-corp {
   color: #15AC9B; }
@@ -159,7 +166,6 @@ div.spacer {
       margin: 10px 0; }
   .bloque .question {
     margin: 0 0 20px;
-    font-size: 48px;
     font-weight: 200;
     color: #777; }
   .bloque.bloque-darker {
@@ -174,14 +180,40 @@ ol#list-steps {
     counter-increment: li; }
   ol#list-steps li::before {
     content: counter(li);
-    color: red;
+    color: #f4645f;
     display: inline-block;
-    width: 1em;
-    margin-left: -1.5em;
+    width: 2em;
+    margin-left: -2.5em;
     margin-right: 0.5em;
     text-align: right;
-    direction: rtl; }
+    direction: rtl;
+    border: 2px solid #f4645f;
+    border-radius: 50%;
+    padding-right: 10px; }
 
+/*
+
+ol#list-steps>li:before {
+  position: absolute;
+  top: -.5em;
+  // font-family: "Open Sans",sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  left: -3.75em;
+  width: 2.25em;
+  height: 2.25em;
+  line-height: 2.25em;
+  text-align: center;
+  z-index: 9;
+  color: #00c4cc;
+  border: 2px solid #00c4cc;
+  border-radius: 50%;
+  content: counter(li-counter);
+  background-color: #ebeced;
+  counter-increment: li-counter;
+
+}
+*/
 /*
   p {
     @include font-size(20px);
@@ -441,6 +473,8 @@ body.front {
       padding: 0 40px; }
     .site nav#main-header a {
       padding-top: 20px; }
+    .site nav#main-header .dropdown-menu a {
+      padding-top: 0; }
     .site nav#main-header a, .site nav#main-header button {
       font-size: 15px;
       color: #525252;
@@ -458,7 +492,6 @@ body.front {
       font-size: 15px;
       color: inherit; }
     .site nav#main-header ul li a {
-      padding-top: 20px;
       color: #525252;
       -webkit-transition: color 0.6s ease;
       -moz-transition: color 0.6s ease;

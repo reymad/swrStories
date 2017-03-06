@@ -1,6 +1,5 @@
 /* header partial | comment */
 
-
 nav#main-header{
 
   .container{
@@ -15,7 +14,15 @@ nav#main-header{
   top: 10px;
   height: 60px;
 
-  a{ padding-top: 20px; }
+  a{
+    padding-top: 20px;
+  }
+
+  .dropdown-menu{
+    a{
+      padding-top: 0;
+    }
+  }
 
   a,button{
 
@@ -38,7 +45,7 @@ nav#main-header{
   ul{
     li{
       a{
-        padding-top: 20px;
+        // padding-top: 20px;
         color: $color-links-header-dark;
         @include transition(color $default-ease ease);
         &:hover{

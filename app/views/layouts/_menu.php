@@ -57,10 +57,17 @@ if(Yii::$app->user->isGuest){
                         )
                         . Html::endForm()
                         . '</li>';
-    $logoutItem[] = ['label' => Icon::show('globe', ['class'=>'social-icon'/*'fa-lg'*/] ) . ' ' . Yii::$app->language, 'items' => [
-                        ['label' => 'es-ES', 'url' => Url::current(['lang'=>'es-ES'])],
-                        ['label' => 'en-US', 'url' => Url::current(['lang'=>'en-US'])],
-                    ]];
+
+    if((Yii::$app->language=='en-US')){
+        $lang = 'EN';
+        $langItem = ['label' => /* Icon::show('es', [], Icon::FI) . */ 'Español', 'url' => Url::to([ '', 'lang' => 'es-ES']) ];
+    }else{
+        $lang = 'ES';
+        $langItem = ['label' => /* Icon::show('us', [], Icon::FI) . */ 'English', 'url' => Url::to([ '', 'lang' => 'en-US']) ];
+    }
+
+    $logoutItem[] = ['label' => Icon::show('globe', ['class'=>'social-icon'/*'fa-lg'*/] ) . ' ' . $lang,
+                        'items' => [ $langItem ]];
     $menu = \yii\helpers\ArrayHelper::merge($menu, $logoutItem);
 
     /* conutdown in menu

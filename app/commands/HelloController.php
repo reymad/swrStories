@@ -34,6 +34,9 @@ class HelloController extends Controller
     }
 
 
+    public function actionIpInfo(){
+
+    }
 
     public function actionCurl()
     {
