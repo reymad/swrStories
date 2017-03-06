@@ -1,6 +1,9 @@
 <?php
 
+use app\components\Helpers;
 use app\components\widgets\FileUploadFormWidget;
+use dosamigos\ckeditor\CKEditor;
+use kartik\widgets\ColorInput;
 use kartik\widgets\Select2;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
@@ -14,9 +17,37 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?php
+        if($model->color=='') $model->color = 'white';
+        echo $form->field($model, 'color')->widget(ColorInput::classname(), [
+            // 'value' => '#fff',//($model->color!='') ? $model->color : '#fff',
+            'options' => [
+                'placeholder' => 'Select color ...',
+            ],
+            'pluginOptions' => [
+                'showInput' => true,
+                'showInitial' => true,
+                'showPalette' => true,
+                'showPaletteOnly' => true,
+                'showSelectionPalette' => true,
+                'showAlpha' => false,
+                'allowEmpty' => false,
+                'preferredFormat' => 'name',
+                'palette' =>  Helpers::getPaletteColors(),
+            ]
+        ]);
+    ?>
+
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'que_es')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'consejo')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'description')->widget(CKEditor::className(), [
+        'options' => ['rows' => 6],
+        'preset' => 'basic',// 'advance'
+    ]) ?>
 
     <?php
         // echo $form->field($model, 'lang')->listBox(['es-ES'=>'Español','en-US'=>'English'])

@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "499db2175ee03ba16f19188ee57bd876",
+    "hash": "e77fdce3598405bc9ad67daf0603dfec",
+    "content-hash": "f38715a45a66e56102922c34568ca90c",
     "packages": [
         {
             "name": "2amigos/yii2-chartjs-widget",
@@ -64,7 +65,67 @@
                 "yii 2",
                 "yii2"
             ],
-            "time": "2016-07-09T19:09:35+00:00"
+            "time": "2016-07-09 19:09:35"
+        },
+        {
+            "name": "2amigos/yii2-ckeditor-widget",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/2amigos/yii2-ckeditor-widget.git",
+                "reference": "60e4d2dbb138706c8c2195a1b29c420bda044b19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/2amigos/yii2-ckeditor-widget/zipball/60e4d2dbb138706c8c2195a1b29c420bda044b19",
+                "reference": "60e4d2dbb138706c8c2195a1b29c420bda044b19",
+                "shasum": ""
+            },
+            "require": {
+                "ckeditor/ckeditor": "dev-full/stable",
+                "yiisoft/yii2": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "asset-installer-paths": {
+                    "bower-asset-library": "vendor/bower"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "dosamigos\\ckeditor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "2amigOS! Consulting Group",
+                    "email": "hola@2amigos.us",
+                    "homepage": "http://2amigos.us",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CKEditor widget for Yii2.",
+            "homepage": "http://yiiwheels.com/extension/ckeditor-widget",
+            "keywords": [
+                "2amigos",
+                "CKEditor",
+                "extension",
+                "widget",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2016-12-01 21:22:21"
         },
         {
             "name": "bower-asset/bootstrap",
@@ -484,6 +545,47 @@
             "time": "2016-12-11 13:37:11"
         },
         {
+            "name": "ckeditor/ckeditor",
+            "version": "dev-full/stable",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ckeditor/ckeditor-releases.git",
+                "reference": "2fb9111efe70608ba74dc4892371f785661eac3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ckeditor/ckeditor-releases/zipball/2fb9111efe70608ba74dc4892371f785661eac3f",
+                "reference": "2fb9111efe70608ba74dc4892371f785661eac3f",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+",
+                "LGPL-2.1+",
+                "MPL-1.1+"
+            ],
+            "authors": [
+                {
+                    "name": "CKSource",
+                    "homepage": "http://cksource.com"
+                }
+            ],
+            "description": "JavaScript WYSIWYG web text editor.",
+            "homepage": "http://ckeditor.com",
+            "keywords": [
+                "CKEditor",
+                "editor",
+                "fckeditor",
+                "html",
+                "javascript",
+                "richtext",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2017-01-12 18:09:18"
+        },
+        {
             "name": "components/flag-icon-css",
             "version": "dev-master",
             "source": {
@@ -662,7 +764,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2016-07-16T12:58:58+00:00"
+            "time": "2016-07-16 12:58:58"
         },
         {
             "name": "facebook/php-sdk-v4",
@@ -957,7 +1059,7 @@
                 "option",
                 "select"
             ],
-            "time": "2015-12-16T18:15:01+00:00"
+            "time": "2015-12-16 18:15:01"
         },
         {
             "name": "kartik-v/php-date-formatter",
@@ -1483,7 +1585,7 @@
                 "popover",
                 "popover-x"
             ],
-            "time": "2016-01-12T16:59:09+00:00"
+            "time": "2016-01-12 16:59:09"
         },
         {
             "name": "kartik-v/yii2-social",
@@ -1583,7 +1685,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2015-06-17T17:34:48+00:00"
+            "time": "2015-06-17 17:34:48"
         },
         {
             "name": "kartik-v/yii2-widget-activeform",
@@ -3011,7 +3113,7 @@
                 "oauth",
                 "yii2"
             ],
-            "time": "2017-02-15T14:34:51+00:00"
+            "time": "2017-02-15 14:34:51"
         },
         {
             "name": "yiisoft/yii2-bootstrap",
@@ -3476,7 +3578,7 @@
                 }
             ],
             "description": "BDD code blocks for PHPUnit and Codeception",
-            "time": "2016-10-21T09:42:00+00:00"
+            "time": "2016-10-21 09:42:00"
         },
         {
             "name": "codeception/verify",
@@ -3512,7 +3614,7 @@
                 }
             ],
             "description": "BDD assertion library for PHPUnit",
-            "time": "2017-01-09T10:58:51+00:00"
+            "time": "2017-01-09 10:58:51"
         },
         {
             "name": "doctrine/instantiator",
@@ -3616,7 +3718,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2017-03-01T16:12:18+00:00"
+            "time": "2017-03-01 16:12:18"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -3681,7 +3783,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-27T10:51:17+00:00"
+            "time": "2017-02-27 10:51:17"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3723,7 +3825,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-01-26T22:05:40+00:00"
+            "time": "2017-01-26 22:05:40"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3822,7 +3924,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2016-09-30T07:12:33+00:00"
+            "time": "2016-09-30 07:12:33"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -3869,7 +3971,7 @@
                     "email": "me@mikevanriel.com"
                 }
             ],
-            "time": "2016-11-25T06:54:22+00:00"
+            "time": "2016-11-25 06:54:22"
         },
         {
             "name": "phpspec/php-diff",
@@ -3970,7 +4072,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-03-03T17:09:02+00:00"
+            "time": "2017-03-03 17:09:02"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -4033,7 +4135,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-04T06:23:20+00:00"
+            "time": "2017-03-04 06:23:20"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4121,7 +4223,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2015-06-21T13:50:34+00:00"
+            "time": "2015-06-21 13:50:34"
         },
         {
             "name": "phpunit/php-timer",
@@ -4170,7 +4272,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2017-02-26T11:10:40+00:00"
+            "time": "2017-02-26 11:10:40"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -4219,7 +4321,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-02-27T10:17:36+00:00"
+            "time": "2017-02-27 10:17:36"
         },
         {
             "name": "phpunit/phpunit",
@@ -4301,7 +4403,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-04T06:41:31+00:00"
+            "time": "2017-03-04 06:41:31"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4502,7 +4604,7 @@
             ],
             "description": "Looks up which function or method a line of code belongs to",
             "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
-            "time": "2017-03-04T06:30:41+00:00"
+            "time": "2017-03-04 06:30:41"
         },
         {
             "name": "sebastian/comparator",
@@ -4566,7 +4668,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2017-02-27T21:25:34+00:00"
+            "time": "2017-02-27 21:25:34"
         },
         {
             "name": "sebastian/diff",
@@ -4618,7 +4720,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2017-02-28T06:03:01+00:00"
+            "time": "2017-02-28 06:03:01"
         },
         {
             "name": "sebastian/environment",
@@ -4668,7 +4770,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2017-02-28T08:22:27+00:00"
+            "time": "2017-02-28 08:22:27"
         },
         {
             "name": "sebastian/exporter",
@@ -4735,7 +4837,7 @@
                 "export",
                 "exporter"
             ],
-            "time": "2017-02-28T08:32:32+00:00"
+            "time": "2017-02-28 08:32:32"
         },
         {
             "name": "sebastian/global-state",
@@ -4832,7 +4934,7 @@
             ],
             "description": "Traverses array structures and object graphs to enumerate all referenced objects",
             "homepage": "https://github.com/sebastianbergmann/object-enumerator/",
-            "time": "2017-02-18T16:04:11+00:00"
+            "time": "2017-02-18 16:04:11"
         },
         {
             "name": "sebastian/recursion-context",
@@ -4885,7 +4987,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2016-11-19T07:33:16+00:00"
+            "time": "2016-11-19 07:33:16"
         },
         {
             "name": "sebastian/resource-operations",
@@ -5095,7 +5197,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-01T18:19:35+00:00"
+            "time": "2017-03-01 18:19:35"
         },
         {
             "name": "symfony/css-selector",
@@ -5323,7 +5425,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2017-02-28T02:18:26+00:00"
+            "time": "2017-02-28 02:18:26"
         },
         {
             "name": "symfony/finder",
@@ -5486,7 +5588,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2017-03-01T22:36:19+00:00"
+            "time": "2017-03-01 22:36:19"
         },
         {
             "name": "webmozart/assert",
@@ -5683,7 +5785,7 @@
                 "gii",
                 "yii2"
             ],
-            "time": "2017-02-25T23:13:18+00:00"
+            "time": "2017-02-25 23:13:18"
         }
     ],
     "aliases": [],

@@ -12,8 +12,11 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property int $post_id
  * @property string $title
+ * @property string $que_es
+ * @property string $consejo
  * @property string $description
  * @property string $lang
+ * @property string $color
  * @property int $created_by
  * @property int $created_at
  * @property int $updated_at
@@ -53,10 +56,11 @@ class Post extends MyActiveRecord
     public function rules()
     {
         return [
-            [['description'], 'string'],
+            [['description','color'], 'string'],
             [['created_by', 'created_at', 'updated_at', 'status'], 'integer'],
             [['lang'], 'required'],
             [['title'], 'string', 'max' => 120],
+            [['que_es','consejo'], 'string', 'max' => 255],
             [['lang'], 'string', 'max' => 5],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
         ];
@@ -70,8 +74,11 @@ class Post extends MyActiveRecord
         return [
             'post_id' => Yii::t('app', 'Post ID'),
             'title' => Yii::t('app', 'Title'),
+            'que_es' => Yii::t('app', 'Qué es'),
+            'consejo' => Yii::t('app', 'Consejo'),
             'description' => Yii::t('app', 'Description'),
             'lang' => Yii::t('app', 'Lang'),
+            'color' => Yii::t('app', 'Color'),
             'created_by' => Yii::t('app', 'Created By'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
