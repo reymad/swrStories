@@ -58,7 +58,7 @@ $this->title = 'My Yii Application';
             </ol>
         </div>
 
-        <div class="bloque">
+        <div class="bloque ohidden">
             <?= Yii::$app->view->render('partials/_envelope') ?>
         </div>
 
