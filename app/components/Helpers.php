@@ -9,6 +9,8 @@
 namespace app\components;
 
 use app\models\Fichero;
+use kartik\icons\FontAwesomeAsset;
+use kartik\icons\Icon;
 use Yii;
 use yii\bootstrap\Html;
 use yii\bootstrap\Nav;
@@ -270,7 +272,12 @@ class Helpers
                         )
                         . Html::endForm()
                         . '</li>'
-                    )
+                    ),
+                    // IDIOMA MENU
+                    ['label' => Icon::show('globe', ['class'=>'social-icon'/*'fa-lg'*/] ) . ' ' . Yii::$app->language, 'items' => [
+                        ['label' => 'es-ES', 'url' => Url::current(['lang'=>'es-ES'])],
+                        ['label' => 'en-US', 'url' => Url::current(['lang'=>'en-US'])],
+                    ]],
                 ],
             ]);
 

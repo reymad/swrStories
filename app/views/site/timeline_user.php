@@ -6,5 +6,8 @@
  * Time: 10:27
  */
 ?>
-<h1>THIS WILL BE THE TIMELINE FILE FOR USERS!</h1>
+<div class="timeline_users text-center">
+    <h1><?=Yii::t('app','timeline.users.wellcome',['username'=>Yii::$app->user->identity->username,])?></h1>
+</div>
+
 

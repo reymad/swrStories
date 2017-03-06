@@ -12,6 +12,7 @@ use russ666\widgets\Countdown;
 use yii\bootstrap\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\helpers\Url;
 
 // frontend menu
 
@@ -56,6 +57,10 @@ if(Yii::$app->user->isGuest){
                         )
                         . Html::endForm()
                         . '</li>';
+    $logoutItem[] = ['label' => Icon::show('globe', ['class'=>'social-icon'/*'fa-lg'*/] ) . ' ' . Yii::$app->language, 'items' => [
+                        ['label' => 'es-ES', 'url' => Url::current(['lang'=>'es-ES'])],
+                        ['label' => 'en-US', 'url' => Url::current(['lang'=>'en-US'])],
+                    ]];
     $menu = \yii\helpers\ArrayHelper::merge($menu, $logoutItem);
 
     /* conutdown in menu

@@ -35,7 +35,12 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
     /* fin cake*/
 
     /* sobre */
-    'sobre.escribir' => '¡Felicitar a Danielle!'
+    'sobre.escribir' => '¡Felicitar a Danielle!',
     /* fin sobre*/
+
+
+    /*time line users*/
+    'timeline.users.wellcome' => '¡Hola {username}!',
+    /*fin timeline useres*/
 
 ];
