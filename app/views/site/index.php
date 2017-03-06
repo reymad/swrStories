@@ -37,6 +37,7 @@ $this->title = 'My Yii Application';
 
             <div class="album">
                 <?= Yii::$app->view->render('partials/_album') ?>
+                <noscript>javscript debe estar habilitado en el navegador</noscript>
             </div>
 
         </div>
