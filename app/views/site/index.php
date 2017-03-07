@@ -35,6 +35,8 @@ $this->title = 'My Yii Application';
                 <?=Yii::t('app','site.thanks.2')?>
                 <br>&middot;<br>
                 <?=Yii::t('app','site.thanks.3')?>
+                <br>&middot;<br>
+                <?=Yii::t('app','site.thanks.4')?>
             </div>
 
             <div class="album">
@@ -50,7 +52,7 @@ $this->title = 'My Yii Application';
                     echo \app\components\widgets\AlbumWidget::widget(['dataProvider'=>$dataProvider]);
 
                 ?>
-                <noscript>javscript debe estar habilitado en el navegador</noscript>
+                <noscript><?=Yii::t('app','noscript.message')?></noscript>
             </div>
 
         </div>

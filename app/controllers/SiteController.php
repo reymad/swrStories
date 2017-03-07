@@ -151,10 +151,10 @@ class SiteController extends MyController
             return
                 $this->render('timeline_dani');
         }
-        else if(Yii::$app->user->can('permisos_usuario')){
+        else if(Yii::$app->user->can('permisos_usuario')){// admin entra x aquí de momento
             return
-                $this->render('timeline_user');
-        }else{
+                $this->redirect('/post'); //('timeline_user');
+        }else{// guest users
             $this->container=false;// no quiero container class en index
             return
                 $this->render('index');
