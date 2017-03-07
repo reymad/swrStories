@@ -35,7 +35,7 @@ $(document).ready(function(){
 });
 
 // scroll manage
-$(window).on("scroll", function () {
+$(window).on("scroll load", function () {
     if ($(this).scrollTop() > 10) {
         $("nav#main-header").css({'top':'0px','height': '60px'});
     }

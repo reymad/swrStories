@@ -18,9 +18,11 @@ $this->params['breadcrumbs'][] = $this->title;
         <?=Yii::t('app','post.info')?>
     </p>
 
+    <!--
     <div class="social text-center">
-        <?= Yii::$app->view->render('/site/partials/_social_sharer'); ?>
+        <?php /* echo Yii::$app->view->render('/site/partials/_social_sharer');*/ ?>
     </div>
+    -->
 
     <?php Pjax::begin(); ?>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
