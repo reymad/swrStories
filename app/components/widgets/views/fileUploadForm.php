@@ -40,7 +40,7 @@ use yii\helpers\Url;
             'initialPreviewAsData'=>true,
             'initialCaption'=>"",
             'overwriteInitial'=>false,
-            'maxFileSize'=>2800,
+            'maxFileSize'=> 2800 * 3,
             'showPreview' => true,
             'showCaption' => true,
             'showRemove' => true,
