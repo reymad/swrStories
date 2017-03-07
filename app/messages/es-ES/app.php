@@ -27,7 +27,8 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
 
     'site.como-funciona.question-answer' => 'Sólo sigue estos pasos',
 
-    'site.como-funciona.question-answer.1' => 'Esta web es privada y tiene un control de acceso, así que es necesario que primero os registréis (SignUp), con un nombre de usuario, email y contraseña es suficiente. (Se mandará un email de confirmación para completar el registro).',
+    'site.como-funciona.question-answer.1' => 'Esta web es privada y tiene un control de acceso, así que es necesario que primero os registréis (SignUp),
+    con un nombre de usuario, email* y contraseña es suficiente. <p class="text-grey-light" style="font-size:small">*Se mandará un email de confirmación para completar el registro, poned un email que utilicéis a menudo.</p>',
     'site.como-funciona.question-answer.2' => 'Una vez registrados ya podéis escribir a Danielle clicando donde ponga \'Crear tarjeta\'',
     'site.como-funciona.question-answer.3' => 'Et voilà! Habréis hecho a una gran persona un poquito más feliz, ¡Gracias!.',
     'site.como-funciona.question-answer.4' => 'Para registrarte y felicitar a Danielle clica en el sobre.',

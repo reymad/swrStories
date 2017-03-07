@@ -15,8 +15,10 @@ use yii\behaviors\TimestampBehavior;
  * @property string $que_es
  * @property string $consejo
  * @property string $description
+ * @property string $imagen_portada
  * @property string $lang
  * @property string $color
+ * @property int $publico
  * @property int $created_by
  * @property int $created_at
  * @property int $updated_at
@@ -56,9 +58,9 @@ class Post extends MyActiveRecord
     public function rules()
     {
         return [
-            [['description','color'], 'string'],
-            [['created_by', 'created_at', 'updated_at', 'status'], 'integer'],
-            [['lang'], 'required'],
+            [['description','color','imagen_portada'], 'string'],
+            [['created_by', 'created_at', 'updated_at', 'status','publico'], 'integer'],
+            [['lang','title','que_es'], 'required'],
             [['title'], 'string', 'max' => 120],
             [['que_es','consejo'], 'string', 'max' => 255],
             [['lang'], 'string', 'max' => 5],
@@ -79,6 +81,7 @@ class Post extends MyActiveRecord
             'description' => Yii::t('app', 'Description'),
             'lang' => Yii::t('app', 'Lang'),
             'color' => Yii::t('app', 'Color'),
+            'publico' => Yii::t('app', 'Tarjeta pública'),
             'created_by' => Yii::t('app', 'Created By'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),

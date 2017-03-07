@@ -5,6 +5,7 @@ use app\components\widgets\FileUploadFormWidget;
 use dosamigos\ckeditor\CKEditor;
 use kartik\widgets\ColorInput;
 use kartik\widgets\Select2;
+use kartik\widgets\SwitchInput;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -77,6 +78,20 @@ use yii\widgets\ActiveForm;
             ],
         ]);
     ?>
+
+    <?php
+        $model->publico = 0;
+        echo $form->field($model, 'publico')->widget(SwitchInput::classname(), [
+            'pluginOptions' => [
+                // 'size' => 'large',
+                'onColor' => 'success',
+                'offColor' => 'danger',
+                'onText' => 'Si',
+                'offText' => 'No',
+            ]
+        ]);
+    ?>
+
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
