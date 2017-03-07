@@ -34,6 +34,8 @@ $this->title = 'My Yii Application';
                 <br>&middot;<br>
                 <?=Yii::t('app','site.thanks.2')?>
                 <br>&middot;<br>
+                <?=Yii::t('app','site.thanks.2.1')?>
+                <br>&middot;<br>
                 <?=Yii::t('app','site.thanks.3')?>
                 <br>&middot;<br>
                 <?=Yii::t('app','site.thanks.4')?>

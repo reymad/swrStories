@@ -15,6 +15,9 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
 
     'site.thanks.2' => 'La idea es sencilla, a través de esta web le creamos una tarjeta de cumpleaños, o tantas como queramos para que cuando las vea, se le caiga la lagrimita...',
 
+    'site.thanks.2.1' => 'Las tarjetas de cumpleaños podrán ser privadas o públicas,
+        vosotros decidiréis si sólo queréis que la vea Dani, o que el día de su cumple puedan verlas otras personas.',
+
     'site.thanks.3' => 'El día de su cumpleaños (hasta entonces ella no tiene ni idea de nada claro), accederá a la web con su usuario propio y verás todas vuestras tarjetas de cumpleaños con vuestros bonitos mensajes y recuerdos.',
 
     'site.thanks.4' => 'Aquí podéis ver un ejemplo de lo que os pido que hagáis, es muy sencillo ya veréis y vosotros podréis customizar la vuestra, esta es la que nuestro gatito McFly le ha creado:',
@@ -24,7 +27,7 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
 
     'site.como-funciona.question-answer' => 'Sólo sigue estos pasos',
 
-    'site.como-funciona.question-answer.1' => 'Esta web es privada y tiene un control de acceso, así que es necesario que primero os registréis (SignUp), con un nombre de usuario, email y contraseña es suficiente. (Se mandará un email de confiramción para completar el registro).',
+    'site.como-funciona.question-answer.1' => 'Esta web es privada y tiene un control de acceso, así que es necesario que primero os registréis (SignUp), con un nombre de usuario, email y contraseña es suficiente. (Se mandará un email de confirmación para completar el registro).',
     'site.como-funciona.question-answer.2' => 'Una vez registrados ya podéis escribir a Danielle clicando donde ponga \'Crear tarjeta\'',
     'site.como-funciona.question-answer.3' => 'Et voilà! Habréis hecho a una gran persona un poquito más feliz, ¡Gracias!.',
     'site.como-funciona.question-answer.4' => 'Para registrarte y felicitar a Danielle clica en el sobre.',
