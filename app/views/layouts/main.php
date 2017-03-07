@@ -4,8 +4,10 @@
 /* @var $content string */
 
 use app\assets\FrontAsset;
+use app\models\Post;
 use kartik\icons\Icon;
 use kartik\widgets\Growl;
+use yii\data\ActiveDataProvider;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 
@@ -31,9 +33,6 @@ Icon::map($this,Icon::FA);
 
 <?php foreach (Yii::$app->session->getAllFlashes() as $message){ ?>
     <?php
-
-    // print_r($message);exit;
-
     echo Growl::widget([
         'type' => (!empty($message['type'])) ? $message['type'] : 'success',
         'title' => (!empty($message['title'])) ? Html::encode($message['title']) : '',

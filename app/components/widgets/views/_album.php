@@ -5,9 +5,10 @@
  * Date: 06/03/2017
  * Time: 16:03
  */
+
 ?>
 <section class="album">
-    <div class="pag-1" style="z-index: 4;" data-zindexclosed="4" data-zindexopen="1">
+    <div class="pag-1" style="z-index: 4;background-color:<?=$model->color;?>" data-zindexclosed="4" data-zindexopen="1">
         <h1>page1</h1>
         <p>마우스를 올려주세요</p>
     </div>

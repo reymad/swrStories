@@ -1,9 +1,11 @@
 <?php
 
 use app\components\Helpers;
+use app\models\Post;
 use kartik\icons\Icon;
 use kartik\social\TwitterPlugin;
 use russ666\widgets\Countdown;
+use yii\data\ActiveDataProvider;
 
 /* @var $this yii\web\View */
 $this->title = 'My Yii Application';
@@ -36,7 +38,18 @@ $this->title = 'My Yii Application';
             </div>
 
             <div class="album">
-                <?= Yii::$app->view->render('partials/_album') ?>
+                <?php
+                    // Yii::$app->view->render('partials/_album');
+
+                    // de momento hay que maquetar el listview para $model
+                    // este será el de McFly...
+                    $dataProvider = new ActiveDataProvider([
+                        'query' => Post::find()->where(['post_id' => 2])->orderBy('post_id DESC'),
+                        'pagination' => false,
+                    ]);
+                    echo \app\components\widgets\AlbumWidget::widget(['dataProvider'=>$dataProvider]);
+
+                ?>
                 <noscript>javscript debe estar habilitado en el navegador</noscript>
             </div>
 
