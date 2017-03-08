@@ -33,6 +33,12 @@ class MyController extends Controller
         parent::init();// only oringin
     }
 
+    /*
+     * Devuelve un array con las imagenes de portada de las tarjetas
+     * */
+    public function getCardImages(){
+        return include Yii::getAlias('@app') . '/config/cardImages.php';
+    }
 
     // INFO::SUBO LAS FUNCIONES AL PARENT
 
