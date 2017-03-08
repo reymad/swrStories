@@ -10,14 +10,12 @@ use yii\data\ActiveDataProvider;
 /* @var $this yii\web\View */
 $this->title = 'My Yii Application';
 
+/* Ejemplo de imagenes tarjeta
 $images = $this->context->getCardImages();
-
 foreach($images as $image){
-
     echo \yii\helpers\Html::img($image['ruta']);
-
 }
-exit;
+*/
 
 ?>
 <div class="site-index">

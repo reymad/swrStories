@@ -4,7 +4,7 @@
 var clicked = false;
 $('div[class*="pag-"]').on('click touchstart', function(){
 
-    if(clicked==false){
+    if(clicked===false){
 
         clicked=true;
 

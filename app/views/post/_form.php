@@ -2,6 +2,7 @@
 
 use app\components\Helpers;
 use app\components\widgets\FileUploadFormWidget;
+use app\components\widgets\PostCardImageWidget;
 use dosamigos\ckeditor\CKEditor;
 use kartik\widgets\ColorInput;
 use kartik\widgets\Select2;
@@ -30,6 +31,13 @@ use yii\widgets\ActiveForm;
 <div class="post-form">
 
     <?php $form = ActiveForm::begin(); ?>
+
+    <?php
+        echo PostCardImageWidget::widget([
+            'model' => $model,
+            'hiddenField' => 'imagen_portada',
+        ]);
+    ?>
 
     <?php
         if($model->color=='') $model->color = 'white';

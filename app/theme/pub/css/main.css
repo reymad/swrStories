@@ -522,27 +522,76 @@ ol#list-steps>li:before {
 section.album {
   margin: 50px auto;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 255px;
+  height: 350px;
   perspective: 1000px; }
   section.album div {
     cursor: pointer;
     position: absolute;
-    width: 200px;
-    height: 250px;
+    width: inherit;
+    height: inherit;
     text-align: center;
-    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.5); }
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.5);
+    /*
+      &:after{
+        content: 'next';
+        font-size: x-small;
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        color: $color-grey;
+      }
+      */ }
+    section.album div .album-pager {
+      font-size: small;
+      position: absolute;
+      color: #777;
+      line-height: 0px;
+      bottom: 12px;
+      right: 6px; }
   section.album div:nth-child(1) {
     background: #fce5cd;
     transform-origin: left center;
-    transition: 2s; }
+    transition: 2s;
+    line-height: 350px;
+    height: inherit; }
+    section.album div:nth-child(1) img {
+      margin: 0 auto;
+      position: relative; }
   section.album div:nth-child(n+2) {
     background: #fafafa;
     transform-origin: left center;
-    transition: 2s; }
+    transition: 2s;
+    height: inherit; }
   section.album div.pag_clicked {
     transform: rotateY(-180deg);
     background: #ddd; }
+
+ul#post-card-wrapper {
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto; }
+  ul#post-card-wrapper li.post-card-item {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd;
+    height: 100px;
+    line-height: 100px;
+    width: 85px;
+    vertical-align: middle;
+    overflow: hidden; }
+    ul#post-card-wrapper li.post-card-item img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto; }
+    ul#post-card-wrapper li.post-card-item:hover {
+      outline: 4px solid #15AC9B;
+      cursor: pointer; }
+    ul#post-card-wrapper li.post-card-item.imageSelected {
+      outline: 4px solid #009092;
+      height: 375px;
+      width: 255px;
+      line-height: 375px; }
 
 body.front {
   margin: 0;

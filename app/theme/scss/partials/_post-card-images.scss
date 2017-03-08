@@ -1,0 +1,32 @@
+ul#post-card-wrapper {
+
+  list-style-type: none;
+  text-align: center;
+  margin: 0 auto;
+
+  li.post-card-item {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid $color-border;
+    height: 100px;
+    line-height: 100px;
+    width: 85px;
+    vertical-align: middle;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+    &:hover {
+      outline: 4px solid $color-corp;
+      cursor: pointer;
+    }
+    &.imageSelected {
+      outline: 4px solid $color-corp-dark;
+      height: 375px;
+      width: 255px;
+      line-height: 375px;
+    }
+  }
+}

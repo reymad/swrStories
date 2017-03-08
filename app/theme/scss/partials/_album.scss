@@ -2,28 +2,53 @@ section{
   &.album {
     margin: 50px auto;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 255px;
+    height: 350px;
     perspective: 1000px;
 
     div{
       cursor: pointer;
       position:absolute;
-      width: 200px;
-      height: 250px;
+      width: inherit;
+      height: inherit;
       text-align: center;
       box-shadow: 5px 7px 10px rgba(0,0,0,0.5);
+      /*
+      &:after{
+        content: 'next';
+        font-size: x-small;
+        position: absolute;
+        bottom: 4px;
+        right: 4px;
+        color: $color-grey;
+      }
+      */
+      .album-pager{
+        font-size: small;
+        position: absolute;
+        color: $color-grey-dark;
+        line-height: 0px;
+        bottom: 12px;
+        right: 6px;
+      }
     }
     div:nth-child(1){//portada
       background: #fce5cd;
       transform-origin: left center;
       transition: 2s;
+      line-height: 350px;
+      height:inherit;
+      img{
+        margin: 0 auto;
+        position: relative;
+      }
       // z-index:3;
     }
     div:nth-child(n+2){
       background: $color-grey-lightest;
       transform-origin: left center;
       transition: 2s;
+      height:inherit;
       // z-index:2;
     }
     div.pag_clicked{

@@ -9,8 +9,6 @@ function ajaxStop(){
     $.unblockUI();
 }
 
-
-
 /*
  * fin function.js
  * */
