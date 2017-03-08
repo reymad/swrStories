@@ -24,12 +24,13 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     -->
 
-    <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <p>
         <?= Html::a(Yii::t('app', 'post.crear.tarjeta'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
+
+    <?php Pjax::begin(); ?>
+
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

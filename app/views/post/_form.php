@@ -60,7 +60,17 @@ use yii\widgets\ActiveForm;
         ]);
     ?>
 
-    <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
+    <?php /* echo $form->field($model, 'title')->textInput(['maxlength' => true]); */ ?>
+
+    <?php
+        echo $form->field($model, 'title')->widget(CKEditor::className(), [
+            'options' => [
+                'rows' => 1,
+                'maxlenght' => true,
+            ],
+            'preset' => 'basic',
+        ]);
+    ?>
 
     <?= $form->field($model, 'que_es')->textInput(['maxlength' => true]) ?>
 
@@ -68,7 +78,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'description')->widget(CKEditor::className(), [
         'options' => ['rows' => 6],
-        'preset' => 'basic',// 'advance'
     ]) ?>
 
     <?php
@@ -80,7 +89,10 @@ use yii\widgets\ActiveForm;
         echo $form->field($model, 'lang')->widget(Select2::classname(), [
             'data' => ['es-ES'=>'Español','en-US'=>'English'],
             'language' => Yii::$app->language,
-            'options' => ['placeholder' => $model->getAttributeLabel('lang')],
+            'options' => [
+                'placeholder' => $model->getAttributeLabel('lang'),
+                'maxlenght' => true,
+            ],
             'pluginOptions' => [
                 'allowClear' => true,
             ],
@@ -88,7 +100,9 @@ use yii\widgets\ActiveForm;
     ?>
 
     <?php
-        $model->publico = 0;
+        if($model->isNewRecord){
+            $model->publico = 1;
+        }
         echo $form->field($model, 'publico')->widget(SwitchInput::classname(), [
             'pluginOptions' => [
                 // 'size' => 'large',

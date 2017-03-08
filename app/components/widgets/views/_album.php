@@ -18,17 +18,20 @@ $i=0;
                 echo Html::img($model->imagen_portada,['class'=>'img img-responsive']);
             }
         ?>
+        <!---->
         <span class="album-pager"><?=(++$i)?>/<?=(3+count($model->ficheros))?></span><!--min 2 pages always + last page-->
     </div>
     <!--next pages-->
     <div class="pag-2" style="z-index: 3;" data-zindexclosed="3" data-zindexopen="2">
         <h1>page2</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, tenetur.</p>
+        <!---->
         <span class="album-pager"><?=(++$i)?>/<?=(3+count($model->ficheros))?></span>
     </div>
     <div class="pag-3" style="z-index: 2;" data-zindexclosed="2" data-zindexopen="3">
         <h1>page3</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, tenetur.</p>
+        <!---->
         <span class="album-pager"><?=(++$i)?>/<?=(3+count($model->ficheros))?></span>
     </div>
 
@@ -36,6 +39,7 @@ $i=0;
     <div class="" style="z-index: 0;">
         <h1>page4</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, tenetur.</p>
+        <!---->
         <span class="album-pager"><?=(++$i)?>/<?=(3+count($model->ficheros))?></span>
     </div>
 </section>
