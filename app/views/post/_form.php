@@ -33,6 +33,10 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?php
+
+        /*
+         * All tema de las postcards
+         * */
         echo PostCardImageWidget::widget([
             'model' => $model,
             'hiddenField' => 'imagen_portada',
@@ -60,16 +64,20 @@ use yii\widgets\ActiveForm;
         ]);
     ?>
 
-    <?php /* echo $form->field($model, 'title')->textInput(['maxlength' => true]); */ ?>
-
     <?php
+    /*
+        $title_maxlenght = $model->getAttributeRule('title','maxlenght');
         echo $form->field($model, 'title')->widget(CKEditor::className(), [
             'options' => [
                 'rows' => 1,
-                'maxlenght' => true,
+                'maxlength' => $title_maxlenght,
             ],
-            'preset' => 'basic',
+            'preset' => 'advance',
         ]);
+    */
+
+        echo $form->field($model, 'title')->textInput(['maxlength' => true])
+
     ?>
 
     <?= $form->field($model, 'que_es')->textInput(['maxlength' => true]) ?>
@@ -86,6 +94,7 @@ use yii\widgets\ActiveForm;
         if($model->isNewRecord){
             $model->lang = Yii::$app->language;
         }
+    /*
         echo $form->field($model, 'lang')->widget(Select2::classname(), [
             'data' => ['es-ES'=>'Español','en-US'=>'English'],
             'language' => Yii::$app->language,
@@ -97,6 +106,10 @@ use yii\widgets\ActiveForm;
                 'allowClear' => true,
             ],
         ]);
+    */
+
+        echo $form->field($model, 'lang')->label(false)->hiddenInput(['value'=>$model->lang]);
+
     ?>
 
     <?php

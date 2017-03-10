@@ -14,16 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p class="info">
-        <?=Yii::t('app','post.info')?>
-    </p>
-
-    <!--
-    <div class="social text-center">
-        <?php /* echo Yii::$app->view->render('/site/partials/_social_sharer');*/ ?>
-    </div>
-    -->
-
     <p>
         <?= Html::a(Yii::t('app', 'post.crear.tarjeta'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
@@ -105,4 +95,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
     <?php Pjax::end(); ?>
+
+
+
 </div>

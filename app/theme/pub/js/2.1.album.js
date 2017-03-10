@@ -19,12 +19,15 @@ $('div[class*="pag-"]').on('click touchstart', function(){
 
         }else{// pagina cerrada
 
+            // hoja de fotos hay que forzar zindex si esta cerrada
+            if(elem.hasClass('pag-4')) { elem.css('z-index',4); }
+
             // si está cerrada esperamos animación hasta poner index
             elem.toggleClass('pag_clicked');
             setTimeout(function(){
                 elem.css('z-index', elem.attr('data-zindexopen'));
                 clicked=false;
-            }, 1500);
+            }, 1000);
 
         }
 

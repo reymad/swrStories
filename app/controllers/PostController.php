@@ -47,14 +47,17 @@ class PostController extends MyController
      */
     public function actionIndex()
     {
+        $view = 'index';
         $searchModel = new PostSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         // solo admins pueden ver todos los post. esto es una ñapa, tengo que ver como hacerlo con el user can
         if(!Yii::$app->user->identity->getIsAdmin()){
+            // los usuarios normales no ven grid
+            $view = 'index-user';
             $dataProvider->query->andFilterWhere(['created_by' => Yii::$app->user->getId()]);
         }
 
-        return $this->render('index', [
+        return $this->render($view, [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

@@ -61,7 +61,7 @@ class Post extends MyActiveRecord
             [['description','color','imagen_portada'], 'string'],
             [['created_by', 'created_at', 'updated_at', 'status','publico'], 'integer'],
             [['lang','title','que_es'], 'required'],
-            [['title'], 'string', 'max' => 120],
+            [['title'], 'string', 'max' => 30 /*120*/],
             [['que_es','consejo'], 'string', 'max' => 255],
             [['lang'], 'string', 'max' => 5],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],

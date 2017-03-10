@@ -33,25 +33,31 @@ class PostCardImageWidget extends Widget
         $isNewRecord = ($this->model->isNewRecord) ? 1 : 0;
         $rutaImg = (!$isNewRecord && $this->model[$this->hiddenField]) ? $this->model[$this->hiddenField] : '';
 
-        $js = <<<JS
+        $this->js = <<<JS
 
             $('.post-card-item').on('click',function(){
 
+                $('#btn-ver-mas').show();
                 $('.post-card-item').removeClass('imageSelected').hide();
                 $(this).addClass('imageSelected').show();
                 var value = $(this).children('img').attr('src');
                 $('input#hiddenImageSrc').val(value);
+
+
             });
 
              if($isNewRecord==0){
+                /* no es nuevo */
                 $('img[src="$rutaImg"]').parent('li').click();
-            }
+                $('#btn-ver-mas').show();
+             }
 
 
             $('#btn-ver-mas').on('click', function(){
 
                 $('.post-card-item').removeClass('imageSelected').show();
                 $('input#hiddenImageSrc').val('');
+                $(this).hide();
 
                 return false;
 
@@ -59,7 +65,7 @@ class PostCardImageWidget extends Widget
 
 JS;
 
-        \Yii::$app->view->registerJs($js, View::POS_LOAD, 'postCardImages');
+        \Yii::$app->view->registerJs($this->js, View::POS_LOAD, 'postCardImages');
 
         parent::init();
     }
@@ -109,7 +115,7 @@ JS;
 
             echo Html::activeHiddenInput($this->model, $this->hiddenField,['id'=>'hiddenImageSrc']);
             echo '<br><div>';
-            echo Html::a(\Yii::t('app','post.cambiar-portada'), '#', ['id'=>'btn-ver-mas','class'=>'btn btn-primary centered']);
+            echo Html::a(\Yii::t('app','post.cambiar-portada'), '#', ['id'=>'btn-ver-mas','class'=>'btn btn-primary centered','style'=>'display:none;']);
             echo '</div><br><br>';
 
     }

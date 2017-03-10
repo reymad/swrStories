@@ -522,7 +522,7 @@ ol#list-steps>li:before {
 section.album {
   margin: 50px auto;
   position: relative;
-  width: 255px;
+  width: 275px;
   height: 350px;
   perspective: 1000px; }
   section.album div {
@@ -532,6 +532,7 @@ section.album {
     height: inherit;
     text-align: center;
     box-shadow: 5px 7px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
     /*
       &:after{
         content: 'next';
@@ -554,7 +555,10 @@ section.album {
     transform-origin: left center;
     transition: 2s;
     line-height: 350px;
-    height: inherit; }
+    height: 350px;
+    width: inherit; }
+    section.album div:nth-child(1) h1 {
+      font-size: 22px; }
     section.album div:nth-child(1) img {
       margin: 0 auto;
       position: relative; }

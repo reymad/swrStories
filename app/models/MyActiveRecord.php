@@ -12,17 +12,42 @@ namespace app\models;
 use app\behaviors\UserBehavior;
 use app\components\Helpers;
 use Yii;
-use yii\behaviors\AttributeBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
+use yii\validators\StringValidator;
 
 class MyActiveRecord extends ActiveRecord
 {
 
     const STATUS_ACTIVE  = 10;
     const STATUS_DELETED =  0;
+
+
+    /*
+     * Mine: devuelve el valor de una rule o validator
+     * de un determinado field
+     * */
+    public function getAttributeRule($field, $rule){
+
+        foreach ($this->getValidators($field) as $validator) {
+
+            switch($rule){
+
+                case 'maxlenght':
+
+                        if ($validator instanceof StringValidator && $validator->max !== null) {
+                            return $validator->max;
+                            break;
+                        }
+
+                    break;
+
+                // ir añadiendo a conveniencia...
+
+            }
+        }
+
+    }
 
     public function formatDate($attr, $lang){
 

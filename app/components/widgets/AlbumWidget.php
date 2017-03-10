@@ -15,6 +15,7 @@ class AlbumWidget extends Widget
 {
 
     public $dataProvider;
+    public $linkUpdate=false;
 
     public function init()
     {
@@ -40,6 +41,7 @@ class AlbumWidget extends Widget
                         'model'      => $model,
                         'totalCount' => $dataProvider->getTotalCount(),
                         'index'      => $index,
+                        'linkUpdate' => $this->linkUpdate,
                     ]);
                     // or just do some echo
                     // return $model->title . ' posted by ' . $model->author;
