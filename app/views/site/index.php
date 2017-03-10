@@ -1,14 +1,10 @@
 <?php
 
-use app\components\Helpers;
 use app\models\Post;
-use kartik\icons\Icon;
-use kartik\social\TwitterPlugin;
-use russ666\widgets\Countdown;
 use yii\data\ActiveDataProvider;
 
 /* @var $this yii\web\View */
-$this->title = 'My Yii Application';
+$this->title = Yii::$app->name;
 
 /* Ejemplo de imagenes tarjeta
 $images = $this->context->getCardImages();

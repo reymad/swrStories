@@ -13,7 +13,8 @@ use yii\base\Event;
 // var_dump($params['social']['twitter']['appId']); exit;
 
 $config = [
-    'id' => 'basic',
+    'id'  => 'basic',
+    'name'=> 'HappyBDD',
     'basePath' => dirname(__DIR__),
     'language' => 'es-ES',
     'bootstrap' => ['log'],

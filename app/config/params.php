@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@example.com',
+    'adminEmail' => 'jesusrey85@gmail.com',
     'idioma_default' => 'es-ES',
     'idiomas'        => ['es-ES','en-US'],
     'social' => [

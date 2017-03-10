@@ -16,7 +16,7 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
     'site.thanks.2' => 'La idea es sencilla, a través de esta web le creamos una tarjeta de cumpleaños, para que cuando las vea, se le caiga la lagrimita...',
 
     'site.thanks.2.1' => 'Las tarjetas de cumpleaños podrán ser privadas o públicas,
-        vosotros decidiréis si sólo queréis que la vea Dani, o que el día de su cumple pueda verla otras personas.',
+        vosotros decidiréis si sólo queréis que la vea Dani, o que el día de su cumple pueda verla otros usuarios de la web.',
 
     'site.thanks.3' => 'El día de su cumpleaños (hasta entonces ella no tiene ni idea de nada claro), accederá a la web con su usuario propio y verás todas las tarjetas de cumpleaños con vuestros bonitos mensajes y recuerdos.',
 
@@ -59,5 +59,19 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
     'post.info.sin-tarjeta'  => 'Hola {username}, gracias por llegar hasta aquí, ahora sólo queda crear tu tarjeta molona para Danielle.',
     'post.info.con-tarjeta'  => 'Hola {username}, esta es la tarjeta que has creado. Puedes modificarla cuando quieras.',
     /* fin posts*/
+
+    /* flashes*/
+    'flash.title.success' => 'Gracias',
+    'flash.message.success' => 'Operacion realizada correctamente',
+
+    'flash.title.danger' => 'Ups!',
+    'flash.message.danger' => 'Algo ha salido mal...',
+    /* fin flashes*/
+
+    /* contacto*/
+    'site.contact' => 'Puedes contactar conmigo desde aquí si tienes alguna duda, en cuanto pueda me pondré en contacto contigo.',
+    'Contact' => 'Contacto',
+    'boton.enviar' => 'Enviar',
+    'general-aceptar' => 'Qué sí!'
 
 ];

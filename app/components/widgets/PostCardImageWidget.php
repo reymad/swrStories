@@ -75,7 +75,7 @@ JS;
             $provider = new ArrayDataProvider([
                 'allModels' => $this->provider,
                 'sort' => [
-                    'attributes' => ['id', 'username', 'email'],
+                    'attributes' => ['nombre'],
                 ],
                 'pagination' => false,
                 /*
