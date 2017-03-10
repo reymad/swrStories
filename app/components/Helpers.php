@@ -282,7 +282,7 @@ class Helpers
                 'encodeLabels' => false,
                 'items' => [
                     ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
+                    // ['label' => 'About', 'url' => ['/site/about']],
                     ['label' => 'Contact', 'url' => ['/site/contact']],
                     Yii::$app->user->isGuest ? (
                     ['label' => 'SignUp', 'url' => ['/user/register'], 'active'=>(Url::current()=='/user/register')]// active manual

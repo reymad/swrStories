@@ -216,7 +216,7 @@ $config = [
                 'app*' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/messages',
-                    'sourceLanguage' => ['es-ES'],
+                    'sourceLanguage' => 'es-ES',
                     'fileMap' => [
                         'app' => 'app.php',
                     ],
