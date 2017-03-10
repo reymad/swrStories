@@ -16,10 +16,15 @@ class MyController extends Controller
 {
 
     /*
+     * hay que cerar y modificar este en dektrium
+     *
      * dektrium/messages/user/es
      * 'Your account has been created and a message with further instructions has been sent to your email' =>
         'Tu cuenta ha sido creada y se te ha enviado un email a tu cuenta de correo para que confirmes y finalices el registro. <br>Si no ves el email, mira en tu carpeta de spam.
         <br><br><small>*Si sigues sin recibirlo o no lo encuentras por ningún lado :/ puedes volver a solicitar otro aquí » <a href="/user/resend">Solicitar otro email de confirmación</a></small>.'
+     *
+     // mine
+    'Thank you, registration is now complete.' => 'Gracias , el registro ha finalizado y ya estás logado en la aplicación. Puedes crear tu tarjeta aquí » <a href="/post/create">Crear tarjeta</a>.',
      *
      * */
 
