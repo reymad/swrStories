@@ -15,7 +15,7 @@ return [
     'help' => null,
     'sourcePath' => '@app',
     'messagePath' => '@app/messages',
-    'languages' => ['es-ES','en-US'],
+    'languages' => ['en-US','es-ES'],
     'translator' => 'Yii::t',
     'sort' => false,
     'overwrite' => true,
@@ -36,9 +36,11 @@ return [
         '*.php',
     ],
     'format' => 'php',
+    /*
     'db' => 'db',
     'sourceMessageTable' => '{{%source_message}}',
     'messageTable' => '{{%message}}',
     'catalog' => 'messages',
     'ignoreCategories' => [],
+    */
 ];

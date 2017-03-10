@@ -213,13 +213,16 @@ $config = [
         */
         'i18n' => [
             'translations' => [
-                'app*' => [
+                'app' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/messages',
                     'sourceLanguage' => 'es-ES',
+                    'forceTranslation' => true,// necesarisimo en mi caso default y source son el mismo idioma
+                    /*
                     'fileMap' => [
                         'app' => 'app.php',
                     ],
+                    */
                 ],
             ],
         ],
