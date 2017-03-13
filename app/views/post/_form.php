@@ -121,15 +121,15 @@ use yii\widgets\ActiveForm;
                 // 'size' => 'large',
                 'onColor' => 'success',
                 'offColor' => 'danger',
-                'onText' => 'Si',
-                'offText' => 'No',
+                'onText' => Yii::t('app','yes'),
+                'offText' => Yii::t('app','No'),
             ]
         ]);
     ?>
 
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success','style'=>'width:100%;']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
@@ -138,7 +138,7 @@ use yii\widgets\ActiveForm;
         if(!$model->isNewRecord){
             echo FileUploadFormWidget::widget(['modelPadre' => $model]);
         }else{
-            echo 'Guarda tu post y podrás proceder a subir las fotos ;)';
+            echo '<div class="alert alert-info">'.Yii::t('app','post.info.pic').'</div>';
         }
     ?>
 

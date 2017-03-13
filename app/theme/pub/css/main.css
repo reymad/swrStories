@@ -571,6 +571,14 @@ section.album {
     transform: rotateY(-180deg);
     background: #ddd; }
 
+.ul-foto {
+  list-style-type: none;
+  text-align: center; }
+  .ul-foto .li-foto {
+    display: inline-block;
+    margin: 1em;
+    box-shadow: 2px 2px 5px rgba(119, 119, 119, 0.5); }
+
 ul#post-card-wrapper {
   list-style-type: none;
   text-align: center;

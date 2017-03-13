@@ -6,6 +6,7 @@
  * Time: 16:03
  */
 use kartik\icons\Icon;
+use yii\bootstrap\Modal;
 use yii\helpers\Html;
 
 $i=0;
@@ -64,14 +65,15 @@ if($model->ficheros && count($model->ficheros)>0){
     ?>
             <!-- ver fotos -->
             <div class="" style="z-index:0" >
-                <h1>Fotos</h1>
+                <h1><?=ucfirst(Yii::t('app','fotos'))?></h1>
                 <p><?= Icon::show('picture-o', ['class'=>'fa-5x'] ); ?></p>
-                <p><?= Html::a(Yii::t('app','Ver {total} {foto}',
+                <p><?php
+                    echo  Html::a(Yii::t('app','Ver {total} {foto}',
                         [   'total'=> count($model->ficheros),
                             'foto' =>(count($model->ficheros)>1) ? Yii::t('app','fotos') : Yii::t('app','foto'),
                         ])
-                        ,'#'); ?></p>
-                <!---->
+                        ,'#',['id'=>'toggleModal','class'=>'btn btn-primary']);// ver js registered en AlbumWidget.php
+                ?></p>
                 <span class="album-pager">5/<?=$totalPages?></span><?php /*(++$i) ?>/<?= (++$i)/(3 + count($model->ficheros)) */ ?>
             </div>
 
@@ -82,7 +84,7 @@ if($model->ficheros && count($model->ficheros)>0){
 
             <!--last page-->
             <div class="" style="z-index: 0;">
-                <h1>page4</h1>
+                <h1>Last page no pìcs</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, tenetur.</p>
                 <!---->
                 <span class="album-pager"><?=$lastPage?>/<?=$totalPages?></span>
@@ -97,13 +99,36 @@ if($model->ficheros && count($model->ficheros)>0){
 </section>
 
 <?php
-    // para vista /post/index-user
+    // para vista /post/index-user, widget property
     if($linkUpdate){
         ?>
             <div class="text-center">
                 <?= Html::a(Yii::t('app', 'post.modificar.tarjeta'), ['/post/update','id'=>$model->post_id], ['class' => 'btn btn-primary']) ?>
             </div>
         <?php
+    }
+
+    if($tieneFicheros){
+
+            Modal::begin([
+                // 'header'=>'<h4>Modal</h4>',
+                'id'=>'modal',
+                'size'=>'modal-lg',
+                'options' => [
+                    //'style' => 'z-index:9999',
+                ]
+            ]);
+
+            echo "<div id='modalContent text-center'><ul class='ul-foto'>";
+
+                foreach($model->ficheros as $foto){
+                    echo '<li class="li-foto">' . Html::img($foto->ruta_completa,['class'=>'img img-responsive']) . '</li>';
+                }
+
+            echo "</div></ul>";
+
+            Modal::end();
+
     }
 
 ?>

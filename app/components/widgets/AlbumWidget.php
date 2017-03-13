@@ -9,6 +9,7 @@
 namespace app\components\widgets;
 
 use yii\base\Widget;
+use yii\web\View;
 use yii\widgets\ListView;
 
 class AlbumWidget extends Widget
@@ -19,6 +20,17 @@ class AlbumWidget extends Widget
 
     public function init()
     {
+
+        $js = <<<JS
+        $('#toggleModal').on('click', function(){
+                $('#modal').modal('show');
+                return false;
+        });
+JS;
+
+        \Yii::$app->view->registerJs($js, View::POS_READY, 'modalToggle');
+
+
         parent::init();
     }
 

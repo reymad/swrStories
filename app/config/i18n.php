@@ -18,7 +18,7 @@ return [
     'languages' => ['en-US','es-ES'],
     'translator' => 'Yii::t',
     'sort' => false,
-    'overwrite' => true,
+    'overwrite' => false,
     'removeUnused' => false,
     'markUnused' => true,
     'except' => [

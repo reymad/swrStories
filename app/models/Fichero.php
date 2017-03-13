@@ -60,6 +60,7 @@ class Fichero extends MyActiveRecord
             'extension' => Yii::t('app', 'Extension'),
             'ruta_completa' => Yii::t('app', 'Ruta Completa'),
             'size' => Yii::t('app', 'Size'),
+            'ficheros' => ucfirst(Yii::t('app', 'fotos')),
             'created_by' => Yii::t('app', 'Created By'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
