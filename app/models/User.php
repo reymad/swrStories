@@ -28,6 +28,10 @@ class User extends BaseUser {
         return ($this->getRoleName()=='admin');
     }
 
+    public function getIsDanielle(){
+        return ($this->getRoleName()=='danielle');
+    }
+
     /*
      * Devuelve nombre del role del user
      * */

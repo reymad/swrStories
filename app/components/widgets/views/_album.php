@@ -51,7 +51,7 @@ if($model->ficheros && count($model->ficheros)>0){
     </div>
 
     <!-- felicitacion -->
-    <div class="pag-4" style="z-index: <?=($lastPage-3)?>;" data-zindexclosed="<?=($lastPage-3)?>" data-zindexopen="4">
+    <div class="pag-4" style="z-index: <?=($lastPage-3)?>; overflow-y: auto;" data-zindexclosed="<?=($lastPage-3)?>" data-zindexopen="4">
         <h4><?=Yii::t('app','Felicitación')?></h4>
         <p>
             <?=$model->description?>
@@ -72,7 +72,7 @@ if($model->ficheros && count($model->ficheros)>0){
                         [   'total'=> count($model->ficheros),
                             'foto' =>(count($model->ficheros)>1) ? Yii::t('app','fotos') : Yii::t('app','foto'),
                         ])
-                        ,'#',['id'=>'toggleModal','class'=>'btn btn-primary']);// ver js registered en AlbumWidget.php
+                        ,'#',['class'=>'toggleModal btn btn-primary','data-post_id'=>$model->post_id]);// ver js registered en AlbumWidget.php
                 ?></p>
                 <span class="album-pager">5/<?=$totalPages?></span><?php /*(++$i) ?>/<?= (++$i)/(3 + count($model->ficheros)) */ ?>
             </div>
@@ -112,7 +112,7 @@ if($model->ficheros && count($model->ficheros)>0){
 
             Modal::begin([
                 // 'header'=>'<h4>Modal</h4>',
-                'id'=>'modal',
+                'id'=>'modal-'.$model->post_id,
                 'size'=>'modal-lg',
                 'options' => [
                     //'style' => 'z-index:9999',

@@ -17,6 +17,7 @@ class RbacConf
     const ROLE_USUARIO  = 'usuario';
     const ROLE_INVITADO = 'invitado';
     const ROLE_PREMIUM  = 'usuario_premium';
+    const ROLE_DANIELLE = 'danielle';
 
     // REGLAS
     const RULE_ISAUTHOR = 'isAuthor';

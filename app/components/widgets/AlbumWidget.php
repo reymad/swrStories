@@ -22,8 +22,10 @@ class AlbumWidget extends Widget
     {
 
         $js = <<<JS
-        $('#toggleModal').on('click', function(){
-                $('#modal').modal('show');
+        $('.toggleModal').on('click', function(){
+                var post_id = $(this).attr('data-post_id');
+                console.log('toggle data-post_id');
+                $('#modal-'+post_id).modal('show');
                 return false;
         });
 JS;

@@ -31,6 +31,7 @@ use yii\helpers\Url;
         'tabla_padre_id' => $modelPadre->getId(),
         'status'         => Fichero::STATUS_ACTIVE,
     ])->all();
+
     // tiene fotos??
     if($fotos){
         $fotosOptions = [
@@ -54,9 +55,9 @@ use yii\helpers\Url;
             $fotosOptions['initialPreview'][] = $foto->ruta_completa;
             $fotosOptions['initialPreviewConfig'][] = [
                 'caption' => $foto->nombre_original,
-                'size' => $foto->size,
-                'url' => '/ajax/file-delete',
-                'key' => $foto->fichero_id,
+                'size'    => $foto->size,
+                'url'     => '/ajax/file-delete',
+                'key'     => $foto->fichero_id,
             ];
         }
         $pluginOptions = \yii\helpers\ArrayHelper::merge($pluginOptions, $fotosOptions);

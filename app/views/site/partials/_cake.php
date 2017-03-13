@@ -7,6 +7,8 @@
  */
 use russ666\widgets\Countdown;
 
+$showTime = ( isset($showTimeLeft) ) ? $showTimeLeft : true;
+
 ?>
 <!--
 autor: Marco Barría
@@ -168,6 +170,9 @@ https://twitter.com/marco_bf
     </path>
     <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
 </svg>
+<?php
+    if($showTime!==false){
+?>
 <div class="text">
     <h2 class="text-grey-light"><?=Yii::t('app','site.time.left')?></h2>
     <p>
@@ -183,3 +188,6 @@ https://twitter.com/marco_bf
         ?>
     </p>
 </div>
+<?php
+    }// fin showTime
+?>
