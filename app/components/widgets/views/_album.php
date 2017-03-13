@@ -32,7 +32,8 @@ if($model->ficheros && count($model->ficheros)>0){
 
     <!-- ¿Qué es ? -->
     <div class="pag-2" style="z-index: <?=($lastPage-1)?>;" data-zindexclosed="<?=($lastPage-1)?>" data-zindexopen="2">
-        <h1><?=Yii::t('app','¿Qué es para mí Danielle?')?></h1>
+        <h4><?=Yii::t('app','¿Qué es para mí Danielle?')?></h4>
+        <p>&middot;</p>
         <p>
             <?=$model->que_es?>
         </p>
@@ -43,6 +44,7 @@ if($model->ficheros && count($model->ficheros)>0){
     <!-- Consejo -->
     <div class="pag-3" style="z-index: <?=($lastPage-2)?>;" data-zindexclosed="<?=($lastPage-2)?>" data-zindexopen="3">
         <h4><?=Yii::t('app','¿Un consejo para esta nueva decada?')?></h4>
+        <p>&middot;</p>
         <p>
             <?=$model->consejo?>
         </p>
@@ -84,8 +86,9 @@ if($model->ficheros && count($model->ficheros)>0){
 
             <!--last page-->
             <div class="" style="z-index: 0;">
-                <h1>Last page no pìcs</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, tenetur.</p>
+                <h1>&nbsp;</h1>
+                <p><?= Icon::show('birthday-cake', ['class'=>'fa-5x'] ); ?></p>
+                <h1><?=Yii::t('app','happy.birthday')?></h1>
                 <!---->
                 <span class="album-pager"><?=$lastPage?>/<?=$totalPages?></span>
             </div>

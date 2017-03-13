@@ -103,4 +103,6 @@ specially from beloved people that is so far in her everyday life.',
 
     'site.time.left' => 'Time left...',
     'sobre.escribir' => '¡I\'m in. let\'s do it!',
+
+    'happy.birthday' => 'Happy Birthday!',
 ];

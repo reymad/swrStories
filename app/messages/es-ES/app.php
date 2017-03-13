@@ -93,4 +93,5 @@ me gustaría que tod@s las personas cercanas a ella le dediquemos algo bonito pa
     'site.thanks.4' => 'Aquí podéis ver un ejemplo de lo que os pido que hagáis, es muy sencillo ya veréis y vosotros podréis customizar la vuestra, esta es la que nuestro gatito McFly le ha creado:',
     'site.time.left' => 'Faltan...',
     'sobre.escribir' => '¡Felicitar a Danielle!',
+    'happy.birthday' => '¡Felicidades!',
 ];
