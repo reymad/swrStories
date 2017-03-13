@@ -120,17 +120,21 @@ class SiteController extends MyController
         /*
          * Ok, si estoy logado en twitter, con esto accedo a la api
          * */
+        /*
         if(isset(Yii::$app->user->identity->accounts['twitter'])){
             $client = Yii::$app->authClientCollection->getClient('twitter');
             // var_dump($client->api('statuses/home_timeline.json', 'GET'));
         }
+        */
         /*
          * Ok, si estoy logado en fb, con esto accedo a algunos de los campos
          * */
+        /*
         if(isset(Yii::$app->user->identity->accounts['facebook'])){
             $client = Yii::$app->authClientCollection->getClient('facebook');
             // var_dump($client->api('/me?fields=id,name,picture,about,birthday,cover,education', 'GET'));
         }
+        */
 
 
         /* kartik extension */
@@ -146,7 +150,7 @@ class SiteController extends MyController
         */
         if(
             Yii::$app->user->can('permisos_danielle')
-            // || Yii::$app->user->can('permisos_admin')
+            || Yii::$app->user->can('permisos_admin')
         ){
             return
                 $this->render('timeline_dani');

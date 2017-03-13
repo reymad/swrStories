@@ -20,8 +20,8 @@ class JsApisAsset extends AssetBundle
     public $sourcePath = '@app/theme/pub/jsapis';
     public $css = [];
     public $js  = [
-        'jquery/jquery.browser.js',
-        'jquery/jquery.blockUI.js',
+        // 'jquery/jquery.browser.js',
+        // 'jquery/jquery.blockUI.js',
         'cookieconsent.min.js',
     ];
     public $depends = [

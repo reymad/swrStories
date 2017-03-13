@@ -205,6 +205,18 @@ return [
           'height' => '225px',
           'width'  => '225px',
       ],
+    'beer1' => [
+        'name' => 'Beerthday',
+        'ruta' => '/assets/dist/images/card/beer1.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'beer2' => [
+        'name' => 'Beerthday 2',
+        'ruta' => '/assets/dist/images/card/beer2.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
 ];
 
 ?>

@@ -97,7 +97,7 @@ specially from beloved people that is so far in her everyday life.',
 
     'site.thanks.2.1' => 'The card may be private so she will be the only one to see it or open to the rest of the users, you decide.',
 
-    'site.thanks.3' => 'September the eight, she will log in here and see a timeline with all your nice cards (meanwhile, we just hope she doesn\'t have a clue about this).',
+    'site.thanks.3' => 'September the eight, she will log in and see a timeline with all your nice cards (meanwhile, we just hope she doesn\'t have a clue about this).',
 
     'site.thanks.4' => 'Here is an example of what I am asking you to do. It\'s very easy and it won\'t take you long to make Danielle a happier person. This is the Card our cat has made for her:',
 
