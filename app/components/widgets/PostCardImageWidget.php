@@ -47,7 +47,7 @@ class PostCardImageWidget extends Widget
 
             });
 
-             if($isNewRecord==0 && $tieneImagen){
+             if($isNewRecord==0 && $tieneImagen==1){
                 /* no es nuevo */
                 $('img[src="$rutaImg"]').parent('li').click();
                 $('#btn-ver-mas').show();
