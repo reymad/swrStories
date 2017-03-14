@@ -153,7 +153,7 @@ class SiteController extends MyController
 
         if(
             Yii::$app->user->can('permisos_danielle')
-            || Yii::$app->user->can('permisos_admin')
+            || Yii::$app->user->can('permisos_admin')// admin entra x aquí de momento
         ){
 
             // dani's provider
@@ -164,7 +164,7 @@ class SiteController extends MyController
             return
                 $this->render('timeline_dani', ['dataProvider'=>$dataProvider] );
         }
-        else if(Yii::$app->user->can('permisos_usuario')){// admin entra x aquí de momento
+        else if(Yii::$app->user->can('permisos_usuario')){
 
             if(strtotime(date('Y-m-d'))==strtotime('2017-09-08')){
 
