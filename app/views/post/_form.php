@@ -3,6 +3,7 @@
 use app\components\Helpers;
 use app\components\widgets\FileUploadFormWidget;
 use app\components\widgets\PostCardImageWidget;
+use app\components\widgets\SketchWidget;
 use dosamigos\ckeditor\CKEditor;
 use kartik\widgets\ColorInput;
 use kartik\widgets\Select2;
@@ -127,6 +128,15 @@ use yii\widgets\ActiveForm;
         ]);
     ?>
 
+    <?php
+        /*
+         * Sketch
+         * De momento na
+         * */
+        echo $model->getAttributeLabel('canvas');
+        echo SketchWidget::Widget();
+        echo $form->field($model,'canvas')->label(false)->hiddenInput();
+    ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success','style'=>'width:100%;']) ?>

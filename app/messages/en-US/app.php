@@ -1,5 +1,6 @@
 <?php
 return [
+    '...tenemos <span class="text-sunset" style="font-size: xx-large;">{total}</span> tarjetas' => '...there are <span class="text-sunset" style="font-size: xx-large;">{total}</span> cards so far',
     'Activar' => '',
     'Are you sure you want to delete this item?' => '',
     'Borrar' => 'Delete',

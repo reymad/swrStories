@@ -187,6 +187,10 @@ https://twitter.com/marco_bf
             ]);
         ?>
     </p>
+    <h2 class="text-grey-light">
+        <?=Yii::t('app','...tenemos <span class="text-sunset" style="font-size: xx-large;">{total}</span> tarjetas', ['total'=>$this->context->totalCards])?>
+    </h2>
+
 </div>
 <?php
     }// fin showTime

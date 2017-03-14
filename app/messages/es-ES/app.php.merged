@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    '...tenemos <span class="text-sunset" style="font-size: xx-large;">{total}</span> tarjetas' => '',
     'Activar' => '',
     'Are you sure you want to delete this item?' => '',
     'Borrar' => '',
@@ -62,7 +63,7 @@ return [
     'flash.message.success' => '@@Operacion realizada correctamente@@',
     'flash.title.danger' => '@@Ups!@@',
     'flash.title.success' => '@@Gracias@@',
-    'general-aceptar' => '@@Qué sí!@@',
+    'general-aceptar' => '@@¡Qué sí!@@',
     'general-bienvenido' => '@@@@',
     'general-cargando' => '@@@@',
     'general-politica-cookies' => '@@@@',
@@ -73,13 +74,14 @@ return [
     'Consejo' => 'Dale un consejo a Danielle para esta nueva decada',
     'Contact' => 'Contacto',
     'Description' => 'Escribe aquí la felicitación',
-    'Qué es' => '¿Qué es Danielle para mí?',
+    'Qué es' => '¿Qué es Danielle para tí?',
     'Tarjeta pública' => 'Otros usuarios pueden ver esta tarjeta',
     'Title' => 'Título para la portada',
     'boton.enviar' => 'Enviar',
     'cake.days' => 'D.',
     'cake.months' => 'M.',
     'cake.weeks' => 'S.',
+    'happy.birthday' => '¡Felicidades!',
     'noscript.message' => 'JavaScript debe estar habilitado para que la página funcione correctamente.',
     'post.cambiar-portada' => 'Elegir otra imagen',
     'post.crear.tarjeta' => 'Crear tarjeta de cumpleaños',

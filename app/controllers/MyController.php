@@ -16,6 +16,8 @@ class MyController extends Controller
 {
 
 
+
+    public $totalCards = null;
     /*
      * hay que cerar y modificar este en dektrium
      *

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Post;
 use Yii;
 use app\models\ContactForm;
 use app\models\LoginForm;
@@ -148,6 +149,7 @@ class SiteController extends MyController
         // fetch the facebook sdk api
         $facebook = $social->getFbApi();
         */
+
         if(
             Yii::$app->user->can('permisos_danielle')
             || Yii::$app->user->can('permisos_admin')
@@ -160,6 +162,10 @@ class SiteController extends MyController
                 $this->redirect('/post'); //('timeline_user');
         }else{// guest users
             $this->container=false;// no quiero container class en index
+
+            $query = "select count(*) as total from " . Post::tableName() . " where status = " . Post::STATUS_ACTIVE;
+            $this->totalCards = Yii::$app->db->createCommand($query)->queryScalar();
+
             return
                 $this->render('index');
         }

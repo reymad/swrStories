@@ -17,7 +17,7 @@ use yii\data\ActiveDataProvider;
         </div>
     </div>
 
-    <h1 class="text-center"><?=Yii::t('dani','timeline.title',['username'=>Yii::$app->user->identity->username])?></h1>
+    <h1 class="text-center"><?=Yii::t('dani','timeline.title',['username'=>'Danielle'])?></h1>
 
     <!--albums-->
 

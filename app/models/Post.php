@@ -40,6 +40,8 @@ class Post extends MyActiveRecord
     }
     */
 
+    public $canvas;
+
     /**
      * @inheritdoc
      */
@@ -82,6 +84,7 @@ class Post extends MyActiveRecord
             'lang' => Yii::t('app', 'Lang'),
             'color' => Yii::t('app', 'Color'),
             'publico' => Yii::t('app', 'Tarjeta pública'),
+            'canvas'  => Yii::t('app', 'Canvas'),
             'created_by' => Yii::t('app', 'Created By'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
