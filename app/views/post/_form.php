@@ -150,9 +150,12 @@ JS;
          * Sketch
          * De momento na
          * */
-        echo $model->getAttributeLabel('canvas');
-        echo SketchWidget::Widget();
-        echo $form->field($model,'canvas')->label(false)->hiddenInput();
+        $enableCanvas = false;
+        if($enableCanvas){
+            echo $model->getAttributeLabel('canvas');
+            echo SketchWidget::Widget();
+            echo $form->field($model,'canvas')->label(false)->hiddenInput();
+        }
     ?>
 
     <div class="form-group">
