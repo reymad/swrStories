@@ -558,7 +558,7 @@ section.album {
     height: 350px;
     width: inherit; }
     section.album div:nth-child(1) h1 {
-      font-size: 22px; }
+      font-size: 20px; }
     section.album div:nth-child(1) img {
       margin: 0 auto;
       position: relative; }

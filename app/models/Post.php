@@ -19,6 +19,7 @@ use yii\behaviors\TimestampBehavior;
  * @property string $imagen_portada
  * @property string $lang
  * @property string $color
+ * @property string $font
  * @property int $publico
  * @property int $created_by
  * @property int $created_at
@@ -61,7 +62,7 @@ class Post extends MyActiveRecord
     public function rules()
     {
         return [
-            [['description','color','imagen_portada'], 'string'],
+            [['description','color','imagen_portada','font'], 'string'],
             [['created_by', 'created_at', 'updated_at', 'status','publico'], 'integer'],
             [['lang','title','que_es','description'], 'required'],
             [['title'], 'string', 'max' => 60 /*120*/],
@@ -80,6 +81,7 @@ class Post extends MyActiveRecord
             'post_id' => Yii::t('app', 'Post ID'),
             'nombre_persona' => Yii::t('app', '¿Cómo te llamas? *Queremos que Danielle sepa quién le ha dedicado esta tarjeta'),
             'title' => Yii::t('app', 'Title'),
+            'font' => Yii::t('app', 'Font'),
             'que_es' => Yii::t('app', 'Qué es'),
             'consejo' => Yii::t('app', 'Consejo'),
             'description' => Yii::t('app', 'Description'),

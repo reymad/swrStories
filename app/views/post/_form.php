@@ -9,6 +9,8 @@ use kartik\widgets\ColorInput;
 use kartik\widgets\Select2;
 use kartik\widgets\SwitchInput;
 use yii\helpers\Html;
+use yii\web\JsExpression;
+use yii\web\View;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
@@ -87,6 +89,7 @@ JS;
     <?= $form->field($model, 'nombre_persona')->textInput(['maxlength' => true]) ?>
 
     <?php
+
     /*
         $title_maxlenght = $model->getAttributeRule('title','maxlenght');
         echo $form->field($model, 'title')->widget(CKEditor::className(), [
@@ -98,7 +101,46 @@ JS;
         ]);
     */
 
-        echo $form->field($model, 'title')->textInput(['maxlength' => true])
+    echo $form->field($model, 'title')->textInput(['maxlength' => true]);
+
+
+    $fontData = [
+        'Arial' => 'Arial',
+        'Courier' => 'Courier',
+        'Tahoma' => 'Tahoma',
+        '\'Times New Roman\'' => 'Times New Roman',
+        'Verdana' => 'Verdana',
+        '\'Comic Sans MS\'' => 'Comic Sans MS',
+        '\'Helvetica Neue\'' => 'Helvetica Neue',
+        'sans-serif' => 'sans-serif',
+        'Lucida Grande' => 'Lucida Grande',
+    ];
+
+    // dar formato al select2 : http://demos.krajee.com/widget-details/select2
+    $format = <<< SCRIPT
+        function format(font) {
+            return '<span style="font-family: '+font.id+'">' + font.text + '</span>';
+        }
+SCRIPT;
+
+    $escape = new JsExpression("function(m) { return m; }");
+    $this->registerJs($format, View::POS_HEAD);
+
+        echo $form->field($model, 'font')->widget(Select2::classname(), [
+            'data' => $fontData,
+            'language' => Yii::$app->language,
+            'options' => [
+                'encodeLabels' => false,
+                'placeholder' => $model->getAttributeLabel('font'),
+                'maxlenght' => true,
+            ],
+            'pluginOptions' => [
+                'templateResult' => new JsExpression('format'),
+                'templateSelection' => new JsExpression('format'),
+                'escapeMarkup' => $escape,
+                'allowClear' => true
+            ],
+        ]);
 
     ?>
 
@@ -112,19 +154,7 @@ JS;
 
     <?php
 
-        /*
-            echo $form->field($model, 'lang')->widget(Select2::classname(), [
-                'data' => ['es-ES'=>'Español','en-US'=>'English'],
-                'language' => Yii::$app->language,
-                'options' => [
-                    'placeholder' => $model->getAttributeLabel('lang'),
-                    'maxlenght' => true,
-                ],
-                'pluginOptions' => [
-                    'allowClear' => true,
-                ],
-            ]);
-        */
+
         if($model->isNewRecord){
             $model->lang = Yii::$app->language;
         }

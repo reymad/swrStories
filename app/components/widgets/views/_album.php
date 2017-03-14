@@ -18,9 +18,10 @@ if($model->ficheros && count($model->ficheros)>0){
 }
 
 $createdBy = (isset($model->nombre_persona)) ? $model->nombre_persona : $model->createdBy->username ;
+$font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->font . " !important;" : '' ;
 
 ?>
-<section class="album">
+<section class="album" style="<?=$font?>">
     <!--portada-->
     <?php
     /*
