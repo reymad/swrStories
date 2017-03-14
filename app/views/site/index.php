@@ -80,7 +80,7 @@ foreach($images as $image){
             </ol>
         </div>
 
-        <div class="bloque ohidden">
+        <div class="bloque ohidden" style="padding-bottom: 1em;">
             <?= Yii::$app->view->render('partials/_envelope') ?>
         </div>
 

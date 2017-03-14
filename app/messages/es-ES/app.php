@@ -25,7 +25,7 @@ return [
     'Reset' => '',
     'Ruta' => '',
     'Ruta Completa' => '',
-    'Save' => '',
+    'Save' => 'Guardar',
     'Search' => '',
     'Size' => '',
     'Status' => '',
