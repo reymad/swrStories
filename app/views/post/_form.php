@@ -39,8 +39,8 @@ use yii\widgets\ActiveForm;
     $js = <<<JS
         // get the form id and set the event
         $('form#{$model->formName()}').on('beforeSubmit', function(e) {
-           var form = $(this);
-           console.log('b4submit');
+           // var form = $(this);
+           console.log('form before submit');
            // do the canvas save here
 
         }).on('submit', function(e){
@@ -109,25 +109,23 @@ JS;
     ]) ?>
 
     <?php
-        // echo $form->field($model, 'lang')->listBox(['es-ES'=>'Español','en-US'=>'English'])
-        // echo Html::activeDropDownList($model, 'lang',['es-ES'=>'Español','en-US'=>'English']);
+
+        /*
+            echo $form->field($model, 'lang')->widget(Select2::classname(), [
+                'data' => ['es-ES'=>'Español','en-US'=>'English'],
+                'language' => Yii::$app->language,
+                'options' => [
+                    'placeholder' => $model->getAttributeLabel('lang'),
+                    'maxlenght' => true,
+                ],
+                'pluginOptions' => [
+                    'allowClear' => true,
+                ],
+            ]);
+        */
         if($model->isNewRecord){
             $model->lang = Yii::$app->language;
         }
-    /*
-        echo $form->field($model, 'lang')->widget(Select2::classname(), [
-            'data' => ['es-ES'=>'Español','en-US'=>'English'],
-            'language' => Yii::$app->language,
-            'options' => [
-                'placeholder' => $model->getAttributeLabel('lang'),
-                'maxlenght' => true,
-            ],
-            'pluginOptions' => [
-                'allowClear' => true,
-            ],
-        ]);
-    */
-
         echo $form->field($model, 'lang')->label(false)->hiddenInput(['value'=>$model->lang]);
 
     ?>
