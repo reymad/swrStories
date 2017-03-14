@@ -26,12 +26,8 @@ use yii\data\ActiveDataProvider;
         // Yii::$app->view->render('partials/_album');
 
         // de momento hay que maquetar el listview para $model
-        // este será el de McFly...
-        $dataProvider = new ActiveDataProvider([
-            'query' => Post::find()->where(['status' => Post::STATUS_ACTIVE])->orderBy('created_at DESC'),
-            'pagination' => false,
-        ]);
-        echo \app\components\widgets\AlbumWidget::widget(['dataProvider'=>$dataProvider]);
+
+            echo \app\components\widgets\AlbumWidget::widget(['dataProvider'=>$dataProvider]);
 
         ?>
         <noscript><?=Yii::t('app','noscript.message')?></noscript>

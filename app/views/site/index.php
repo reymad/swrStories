@@ -1,5 +1,6 @@
 <?php
 
+use app\components\widgets\AlbumWidget;
 use app\models\Post;
 use yii\data\ActiveDataProvider;
 
@@ -55,7 +56,7 @@ foreach($images as $image){
                         'query' => Post::find()->where(['post_id' => 2])->orderBy('post_id DESC'),
                         'pagination' => false,
                     ]);
-                    echo \app\components\widgets\AlbumWidget::widget(['dataProvider'=>$dataProvider]);
+                    echo AlbumWidget::widget(['dataProvider'=>$dataProvider]);
 
                 ?>
                 <noscript><?=Yii::t('app','noscript.message')?></noscript>

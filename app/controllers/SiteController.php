@@ -6,6 +6,7 @@ use app\models\Post;
 use Yii;
 use app\models\ContactForm;
 use app\models\LoginForm;
+use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
@@ -154,13 +155,35 @@ class SiteController extends MyController
             Yii::$app->user->can('permisos_danielle')
             || Yii::$app->user->can('permisos_admin')
         ){
+
+            // dani's provider
+            $dataProvider = new ActiveDataProvider([
+                'query' => Post::find()->where(['status' => Post::STATUS_ACTIVE])->orderBy('created_at DESC'),
+                'pagination' => false,
+            ]);
             return
-                $this->render('timeline_dani');
+                $this->render('timeline_dani', ['dataProvider'=>$dataProvider] );
         }
         else if(Yii::$app->user->can('permisos_usuario')){// admin entra x aquí de momento
-            return
-                $this->redirect('/post'); //('timeline_user');
+
+            if(strtotime(date('Y-m-d'))==strtotime('2017-09-08')){
+
+                // users can view public cards the timeline the day of her bd
+                $dataProvider = new ActiveDataProvider([
+                    'query' => Post::find()->where(['status' => Post::STATUS_ACTIVE, 'publico'=>1])->orderBy('created_at DESC'),
+                    'pagination' => false,
+                ]);
+                return
+                    $this->render('timeline_dani', ['dataProvider'=>$dataProvider] );
+
+            }else{
+                return
+                    $this->redirect('/post'); //('timeline_user');
+            }
+
+
         }else{// guest users
+
             $this->container=false;// no quiero container class en index
 
             $query = "select count(*) as total from " . Post::tableName() . " where status = " . Post::STATUS_ACTIVE;
