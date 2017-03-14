@@ -11,7 +11,7 @@ use yii\helpers\Html;
 
 $i=0;
 $tieneFicheros=false;
-$totalPages = $lastPage = 4;
+$totalPages = $lastPage = 5;
 if($model->ficheros && count($model->ficheros)>0){
     $totalPages = $lastPage = 5;
     $tieneFicheros=true;
@@ -19,13 +19,17 @@ if($model->ficheros && count($model->ficheros)>0){
 ?>
 <section class="album">
     <!--portada-->
-    <div class="pag-1" style="z-index: <?=$lastPage?>;background-color:<?=$model->color;?>" data-zindexclosed="<?=$lastPage?>" data-zindexopen="1">
+    <?php
+    /*
+    if($model->imagen_portada!=''){
+       echo Html::img($model->imagen_portada,['class'=>'img img-responsive']);
+    }
+    */
+    $backgroundImage = ($model->imagen_portada!='') ?
+        'background-image: url('.$model->imagen_portada.'); background-repeat:no-repeat; background-position: center center;' : '';
+    ?>
+    <div class="pag-1" style="<?=$backgroundImage?>z-index: <?=$lastPage?>;background-color:<?=$model->color;?>" data-zindexclosed="<?=$lastPage?>" data-zindexopen="1">
         <h1><?=$model->title?></h1>
-        <?php
-            if($model->imagen_portada!=''){
-                echo Html::img($model->imagen_portada,['class'=>'img img-responsive']);
-            }
-        ?>
         <!---->
         <span class="album-pager">1/<?=$totalPages?></span><!--min 2 pages always + last page-->
     </div>

@@ -22,7 +22,7 @@ class JsApisAsset extends AssetBundle
     public $js  = [
         // 'jquery/jquery.browser.js',
         // 'jquery/jquery.blockUI.js',
-        'cookieconsent.min.js',
+        // 'cookieconsent.min.js',
     ];
     public $depends = [
 

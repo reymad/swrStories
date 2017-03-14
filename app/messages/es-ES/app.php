@@ -19,7 +19,7 @@ return [
     'Nombre' => '',
     'Post ID' => '',
     'Posts' => '',
-    'Qué es' => '¿Qué es Danielle para mí?',
+    'Qué es' => '¿Qué es Danielle para tí?',
     'Reset' => '',
     'Ruta' => '',
     'Ruta Completa' => '',

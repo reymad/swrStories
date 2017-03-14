@@ -217,6 +217,18 @@ return [
         'height' => '225px',
         'width'  => '225px',
     ],
+    'trump' => [
+        'name' => 'Trump',
+        'ruta' => '/assets/dist/images/card/trump.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'usa1' => [
+        'name' => 'USA',
+        'ruta' => '/assets/dist/images/card/usa1.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
 ];
 
 ?>

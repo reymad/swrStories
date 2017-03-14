@@ -19,7 +19,7 @@ return [
     'Nombre' => 'Name',
     'Post ID' => '',
     'Posts' => '',
-    'Qué es' => 'What is Danielle to me?',
+    'Qué es' => 'What is Danielle to you?',
     'Reset' => '',
     'Ruta' => 'Path',
     'Ruta Completa' => 'full Path',

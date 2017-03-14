@@ -4,7 +4,7 @@
 window.cookieconsent_options = {
     message: YIIJS.t['app.hola-mundo'],
     learnMore: YIIJS.t['app.general.politica-cookies'],
-    link: 'http://linktosomewhere.com',
+    link: false,// 'http://linktosomewhere.com',
     dismiss : YIIJS.t['app.general.aceptar'],
     theme: 'light-bottom',
     target: '_blank,'
