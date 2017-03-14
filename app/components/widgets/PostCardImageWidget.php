@@ -30,6 +30,13 @@ class PostCardImageWidget extends Widget
 
         $this->provider = include \Yii::getAlias('@app') . '/config/cardImages.php';
 
+        if($this->model->isNewRecord){
+            $isNewRecord = 1;
+            $color = '#fff';
+        }else{
+            $isNewRecord = 0;
+            $color = $this->model->color;
+        }
         $isNewRecord = ($this->model->isNewRecord) ? 1 : 0;
         $tieneImagen = (isset($this->model->imagen_portada) && $this->model->imagen_portada!='' ) ?  1: 0;
         $rutaImg = (!$isNewRecord && $this->model[$this->hiddenField]) ? $this->model[$this->hiddenField] : '';
@@ -49,7 +56,7 @@ class PostCardImageWidget extends Widget
 
              if($isNewRecord==0 && $tieneImagen==1){
                 /* no es nuevo */
-                $('img[src="$rutaImg"]').parent('li').click();
+                $('img[src="$rutaImg"]').parent('li').css('background-color', '$color' ).click();
                 $('#btn-ver-mas').show();
              }
 

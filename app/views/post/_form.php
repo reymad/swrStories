@@ -84,6 +84,8 @@ JS;
         ]);
     ?>
 
+    <?= $form->field($model, 'nombre_persona')->textInput(['maxlength' => true]) ?>
+
     <?php
     /*
         $title_maxlenght = $model->getAttributeRule('title','maxlenght');

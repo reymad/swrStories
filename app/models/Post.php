@@ -12,6 +12,7 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property int $post_id
  * @property string $title
+ * @property string $nombre_persona
  * @property string $que_es
  * @property string $consejo
  * @property string $description
@@ -77,6 +78,7 @@ class Post extends MyActiveRecord
     {
         return [
             'post_id' => Yii::t('app', 'Post ID'),
+            'nombre_persona' => Yii::t('app', '¿Cómo te llamas? *Queremos que Danielle sepa quién le ha dedicado esta tarjeta'),
             'title' => Yii::t('app', 'Title'),
             'que_es' => Yii::t('app', 'Qué es'),
             'consejo' => Yii::t('app', 'Consejo'),

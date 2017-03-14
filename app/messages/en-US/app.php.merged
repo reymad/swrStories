@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    '@{username}' => '',
     'Activar' => '',
     'Are you sure you want to delete this item?' => '',
     'Canvas' => '',
@@ -47,6 +48,7 @@ return [
     'flash.message.' => '',
     'flash.title.' => '',
     'timeline.users.welcome' => '',
+    '¿Cómo te llamas? *Queremos que Danielle sepa quién le ha dedicado esta tarjeta' => '',
     'adios-mundo' => '@@@@',
     'flash.message.danger' => '@@Something went wrong...@@',
     'flash.message.success' => '@@Success@@',

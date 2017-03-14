@@ -2,6 +2,7 @@
 
 return [
     '...tenemos <span class="text-sunset" style="font-size: xx-large;">{total}</span> tarjetas' => '',
+    '¿Cómo te llamas? *Queremos que Danielle sepa quién le ha dedicado esta tarjeta' => '',
     'Activar' => '',
     'Are you sure you want to delete this item?' => '',
     'Borrar' => '',

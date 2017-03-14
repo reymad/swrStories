@@ -19,6 +19,8 @@ return [
 
     // '/user/register' => 'site/register',
 
+    //'user/admin/update'=>'admon/user/admin/update',
+
     '<controller:\w+>/<id:\d+>' => '<controller>/view',
     '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
     '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
@@ -32,6 +34,12 @@ return [
     // estos funcionan // lo comenté para el twitter login
     'user/admin/create'=>'admon/user/admin/create',
     'user/admin/index'=>'admon/user/admin/index',
+
+    'user/admin/update-profile' => 'admon/user/admin/update-profile',
+    'user/admin/info'=>'admon/user/admin/info',
+    'user/admin/block'=>'admon/user/admin/block',
+    'user/admin/update'=>'admon/user/admin/update',
+
 
 
 

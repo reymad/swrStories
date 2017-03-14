@@ -1,6 +1,7 @@
 <?php
 return [
     '...tenemos <span class="text-sunset" style="font-size: xx-large;">{total}</span> tarjetas' => '...there are <span class="text-sunset" style="font-size: xx-large;">{total}</span> cards so far',
+    '¿Cómo te llamas? *Queremos que Danielle sepa quién le ha dedicado esta tarjeta' => 'What\'s your name? *We want Danielle to know who\'s created this card',
     'Activar' => '',
     'Are you sure you want to delete this item?' => '',
     'Borrar' => 'Delete',

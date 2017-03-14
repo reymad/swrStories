@@ -16,6 +16,9 @@ if($model->ficheros && count($model->ficheros)>0){
     $totalPages = $lastPage = 5;
     $tieneFicheros=true;
 }
+
+$createdBy = (isset($model->nombre_persona)) ? $model->nombre_persona : $model->createdBy->username ;
+
 ?>
 <section class="album">
     <!--portada-->
@@ -70,7 +73,7 @@ if($model->ficheros && count($model->ficheros)>0){
         if($tieneFicheros) {
     ?>
             <!-- ver fotos -->
-            <div class="" style="z-index:0" >
+            <div class="" style="z-index:0; background-color:<?=$model->color;?>" >
                 <h1><?=ucfirst(Yii::t('app','fotos'))?></h1>
                 <p><?= Icon::show('picture-o', ['class'=>'fa-5x'] ); ?></p>
                 <p><?php
@@ -80,7 +83,7 @@ if($model->ficheros && count($model->ficheros)>0){
                         ])
                         ,'#',['class'=>'toggleModal btn btn-primary','data-post_id'=>$model->post_id]);// ver js registered en AlbumWidget.php
                 ?></p>
-                <span class="album-pager">5/<?=$totalPages?></span><?php /*(++$i) ?>/<?= (++$i)/(3 + count($model->ficheros)) */ ?>
+                <span class="album-pager"><?=Yii::t('app','By {username}', ['username' => $createdBy])?> &middot; 5/<?=$totalPages?></span><?php /*(++$i) ?>/<?= (++$i)/(3 + count($model->ficheros)) */ ?>
             </div>
 
     <?php
@@ -89,12 +92,12 @@ if($model->ficheros && count($model->ficheros)>0){
             ?>
 
             <!--last page-->
-            <div class="" style="z-index: 0;">
+            <div class="" style="z-index: 0; background-color:<?=$model->color;?>">
                 <h1>&nbsp;</h1>
                 <p><?= Icon::show('birthday-cake', ['class'=>'fa-5x'] ); ?></p>
                 <h1><?=Yii::t('app','happy.birthday')?></h1>
                 <!---->
-                <span class="album-pager"><?=$lastPage?>/<?=$totalPages?></span>
+                <span class="album-pager"><?=Yii::t('app','By {username}', ['username' => $createdBy ])?> &middot; <?=$lastPage?>/<?=$totalPages?></span>
             </div>
 
             <?php
