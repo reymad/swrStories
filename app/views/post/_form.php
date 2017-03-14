@@ -31,7 +31,26 @@ use yii\widgets\ActiveForm;
 
 <div class="post-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php
+        $form = ActiveForm::begin([
+            'id' => $model->formName(),
+        ]);
+
+    $js = <<<JS
+        // get the form id and set the event
+        $('form#{$model->formName()}').on('beforeSubmit', function(e) {
+           var form = $(this);
+           console.log('b4submit');
+           // do the canvas save here
+
+        }).on('submit', function(e){
+            // e.preventDefault();
+        });
+JS;
+
+    $this->registerJs($js);
+
+    ?>
 
     <?php
 
