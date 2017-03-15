@@ -9,6 +9,7 @@ use app\models\LoginForm;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
 
 class SiteController extends MyController
 {
@@ -177,8 +178,15 @@ class SiteController extends MyController
                     $this->render('timeline_dani', ['dataProvider'=>$dataProvider] );
 
             }else{
+
+                if(YII_ENV=='prod'){
+                    $redirect = '/web/post/index';
+                }else{
+                    $redirect = '/post/index';
+                }
+
                 return
-                    $this->redirect('/post'); //('timeline_user');
+                    $this->redirect($redirect); //('timeline_user');
             }
 
 

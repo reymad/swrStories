@@ -8,6 +8,9 @@ RewriteEngine on
 RewriteCond %{THE_REQUEST} ^GET\ /assets/
 RewriteRule ^assets/(.*) /web/assets/$1 [L]
 
+#peticiones a assets se hacen a web/
+RewriteCond %{THE_REQUEST} ^GET\ /post/
+RewriteRule ^post/(.*) /web/post/$1 [L]
 
 # Change yourdomain.com to be your primary domain.
 RewriteCond %{HTTP_HOST} ^(www.)?happybirthdaydanielle.esy.es$
