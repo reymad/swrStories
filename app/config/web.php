@@ -181,7 +181,7 @@ $config = [
                 ],
             ],
         ],
-        'db' => require(__DIR__ . '/db.php'),
+        'db' => require(__DIR__ . '/db_'. YII_ENV . '.php'),
         'urlManager'   => [
             'class' => 'yii\web\UrlManager',
             // 'class' => \app\components\MyUrlManager::className(),
