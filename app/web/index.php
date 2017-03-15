@@ -1,9 +1,12 @@
 <?php
 
 
-$ip = $_SERVER['REMOTE_ADDR'];
+//$ip = $_SERVER['REMOTE_ADDR'];
+$ip = $_SERVER['SERVER_ADDR'];
 
-$prodIp = '212.0.115.18';
+// var_dump($ip); exit;
+
+$prodIp = '93.188.160.210';
 
 if($ip==$prodIp){// produccion
 
