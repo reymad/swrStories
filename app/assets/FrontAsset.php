@@ -34,7 +34,7 @@ class FrontAsset extends AssetBundle
 
         // distinguimos las dependencias por entornos
         if(YII_ENV=='prod'){
-            $this->js[]  = 'assets/dist/js/script.min.js';
+            $this->js[]  = 'assets/dist/js/scripts.min.js';
             $this->css[] = 'assets/dist/css/styles.min.css';
         }else{
             $this->js[]  = 'assets/dist/js/scripts.js';
