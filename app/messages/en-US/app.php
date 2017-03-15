@@ -57,7 +57,7 @@ return [
     'flash.title.success' => 'Thanks',
     'general-aceptar' => 'Ok!',
     'general-bienvenido' => '@@@@',
-    'general-cargando' => '@@@@',
+    'general-cargando' => 'Loading...',
     'general-politica-cookies' => '@@@@',
     'hola-mundo' => '@@@@',
     'timeline.users.wellcome' => '¡Hi {username}!',

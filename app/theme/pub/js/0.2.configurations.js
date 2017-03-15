@@ -6,6 +6,7 @@
 // IMPORTANTE LA VARIABLE GLOBAL (YIIJS) DE JS QUE SE DECLARA EN MyController de YII
 
 // block ui growlUI configuration
+    /*
 var growlUIconfig = {
     message: YIIJS.t['app.general.bienvenido'],
     fadeIn: 700,
@@ -48,6 +49,7 @@ var blockUIloadingConf ={
         color: '#fff'
     }
 };
+*/
 /**
  * FIN 0.2.configuration.js
  */

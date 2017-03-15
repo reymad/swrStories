@@ -36,17 +36,34 @@ use yii\widgets\ActiveForm;
     <?php
         $form = ActiveForm::begin([
             'id' => $model->formName(),
+            'enableClientValidation' => true,
         ]);
 
     $js = <<<JS
         // get the form id and set the event
         $('form#{$model->formName()}').on('beforeSubmit', function(e) {
-           // var form = $(this);
-           console.log('form before submit');
-           // do the canvas save here
+               var form = $(this);
+               console.log('form before submit');
+               // do the canvas save here
+                console.log(form.find('.has-error'));
+                if(form.find('.has-error').length) {
+                    closeLoading();
+                        return false;
+                }
 
         }).on('submit', function(e){
             // e.preventDefault();
+
+             var form = $(this);
+             if(form.find('.has-error').length) {
+                    closeLoading();
+                        return false;
+                }else{
+                    openLoading();
+                    return true;
+                }
+
+
         });
 JS;
 
@@ -200,7 +217,7 @@ SCRIPT;
         if(!$model->isNewRecord){
             echo FileUploadFormWidget::widget(['modelPadre' => $model]);
         }else{
-            echo '<div class="alert alert-info">'.Yii::t('app','post.info.pic').'</div>';
+            echo '<div class="alert alert-info"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;'.Yii::t('app','post.info.pic').'</div>';
         }
     ?>
 

@@ -17,6 +17,22 @@ $(document).ready(function(){
 
 
     /*
+    $('form').on('afterSubmit', function(){
+
+        $.blockUI({
+            message: YIIJS.t['app.general.cargando'],
+            baseZ: 9998,
+            css: {
+                'z-index': 9999,
+            }
+        });
+
+       return true;//
+
+    });
+    */
+
+    /*
     var to = setInterval(function(){
         $('div.transition')
             .slideToggle('slow')
@@ -33,6 +49,22 @@ $(document).ready(function(){
     */
 
 });
+
+function openLoading(){
+
+    $.blockUI({
+        message: YIIJS.t['app.general.cargando'],
+        baseZ: 9998,
+        css: {
+            'z-index': 9999,
+        }
+    });
+
+}
+
+function closeLoading(){
+    $.unblockUI();
+}
 
 // scroll manage
 $(window).on("scroll load", function () {
