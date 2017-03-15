@@ -62,10 +62,14 @@ if(Yii::$app->user->isGuest){
 
     if((Yii::$app->language=='en-US')){
         $lang = 'EN';
-        $langItem = ['label' => /* Icon::show('es', [], Icon::FI) . */ 'Español', 'url' => Url::to([ $url[0], 'lang' => 'es-ES']) ];
+        $route = Url::to([ $url[0], 'lang' => 'es-ES']);
+        $url   = str_replace('/web/web/','/web/',$route);
+        $langItem = ['label' => /* Icon::show('es', [], Icon::FI) . */ 'Español', 'url' => $url ];
     }else{
         $lang = 'ES';
-        $langItem = ['label' => /* Icon::show('us', [], Icon::FI) . */ 'English', 'url' => Url::to([ $url[0], 'lang' => 'en-US']) ];
+        $route = Url::to([ $url[0], 'lang' => 'en-US']);
+        $url   = str_replace('/web/web/','/web/',$route);
+        $langItem = ['label' => /* Icon::show('us', [], Icon::FI) . */ 'English', 'url' => $url ];
     }
 
     $logoutItem[] = ['label' => Icon::show('globe', ['class'=>'social-icon'/*'fa-lg'*/] ) . ' ' . $lang,
