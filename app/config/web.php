@@ -134,7 +134,7 @@ $config = [
         ],
         */
         'assetManager' => [
-            'forceCopy' => (YII_ENV=='dev'),
+            'forceCopy' => true,//(YII_ENV=='dev'),
             //'appendTimestamp' => true,
         ],
         'mobiledetect' => [
