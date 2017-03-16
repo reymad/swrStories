@@ -30,7 +30,7 @@ $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->fo
     }
     */
     $backgroundImage = ($model->imagen_portada!='') ?
-        'background-image: url('.$model->imagen_portada.'); background-repeat:no-repeat; background-position: center center;' : '';
+        'background-image: url('.$model->imagen_portada.'); background-repeat:no-repeat; background-position: center 75%;' : '';
     ?>
     <div class="pag-1" style="<?=$backgroundImage?>z-index: <?=$lastPage?>;background-color:<?=$model->color;?>" data-zindexclosed="<?=$lastPage?>" data-zindexopen="1">
         <h1><?=$model->title?></h1>

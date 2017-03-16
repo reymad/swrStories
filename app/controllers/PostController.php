@@ -89,8 +89,8 @@ class PostController extends MyController
 
 
             $params = [
-                'post' => $model,
-                'user' => Yii::$app->user->identity,
+                'post' => $model->attributes,
+                'user' => Yii::$app->user->identity->attributes,
             ];
             $view = '@app/mail/views/mail1';
             Helpers::enviarEmail(Yii::$app->params['adminEmail'],'Tarjeta Creada', $view, $params, false, 'HappyBDD');
