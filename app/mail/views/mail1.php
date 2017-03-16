@@ -9,12 +9,12 @@
 <table align="center" width="500">
     <tr>
         <td>
-            <?=var_dump($post)?>
+            <?=nl2br(print_r($post,true))?>
         </td>
     </tr>
     <tr>
         <td>
-            <?=var_dump($user)?>
+            <?=nl2br(print_r($user,true))?>
         </td>
     </tr>
 </table>
