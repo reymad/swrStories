@@ -160,7 +160,7 @@ class Helpers
     }
 
 
-	public static function enviarEmail($to, $subject, $view, $params = [], $from = false, $fromName = 'Bijoux Indiscrets', $bcc = []) {
+	public static function enviarEmail($to, $subject, $view, $params = [], $from = false, $fromName = 'HappyBDD', $bcc = []) {
 
 		if(!$from) $from = Yii::$app->params['adminEmail'];
 

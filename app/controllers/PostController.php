@@ -86,6 +86,15 @@ class PostController extends MyController
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Helpers::setFlash('success');
+
+
+            $params = [
+                'post' => $model,
+                'user' => Yii::$app->user->identity,
+            ];
+            $view = '@app/mail/views/mail1';
+            Helpers::enviarEmail(Yii::$app->params['adminEmail'],'Tarjeta Creada', $view, $params, false, 'HappyBDD');
+
             return $this->redirect(['update', 'id' => $model->post_id]);
         } else {
             return $this->render('create', [
