@@ -229,6 +229,12 @@ return [
         'height' => '225px',
         'width'  => '225px',
     ],
+    'eccehomo' => [
+        'name' => 'Ecce Homo',
+        'ruta' => '/assets/dist/images/card/eccehomo.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
 ];
 
 ?>
