@@ -41,27 +41,48 @@ use yii\widgets\ActiveForm;
 
     $js = <<<JS
         // get the form id and set the event
-        $('form#{$model->formName()}').on('beforeSubmit', function(e) {
-               var form = $(this);
-               console.log('form before submit');
-               // do the canvas save here
-                console.log(form.find('.has-error'));
-                if(form.find('.has-error').length) {
-                    closeLoading();
-                        return false;
-                }
+        $('form#{$model->formName()}').on('afterValidate', function(event, attribute, messages, deferreds) {
+
+            console.log(event);
+            console.log(attribute);
+            console.log(messages);
+            console.log(deferreds);
+
+            var form = $(this);
+            if(form.find('.has-error').length) {
+                console.log('tiene error...');
+                closeLoading();
+                    return false;
+            }else{
+                openLoading();
+                console.log('TODO BIEN');
+                    return true;
+            }
 
         }).on('submit', function(e){
-            // e.preventDefault();
+
+
+            /*
+               return false;
 
              var form = $(this);
              if(form.find('.has-error').length) {
+
                     closeLoading();
                         return false;
+
                 }else{
-                    openLoading();
+
+                     // openLoading();
+
+                     if(form.find('.has-error').length) {
+                        closeLoading();
+                         return false;
+                     }
+
                     return true;
                 }
+                */
 
 
         });
