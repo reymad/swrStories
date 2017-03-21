@@ -64,7 +64,7 @@ class Post extends MyActiveRecord
         return [
             [['description','color','imagen_portada','font'], 'string'],
             [['created_by', 'created_at', 'updated_at', 'status','publico'], 'integer'],
-            [['lang','title','que_es','description'], 'required'],
+            [['lang','title','que_es','description','consejo'], 'required'],
             [['title'], 'string', 'max' => 60 /*120*/],
             [['que_es','consejo'], 'string', 'max' => 255],
             [['lang'], 'string', 'max' => 5],
