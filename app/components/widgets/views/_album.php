@@ -65,9 +65,11 @@ $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->fo
         <h4><?=Yii::t('app','Felicitación')?></h4>
         <p>
             <?=$model->description?>
+
         </p>
         <!---->
-        <span class="album-pager">4/<?=$totalPages?></span>
+        <span class="album-pager" style="top: 12px;">4/<?=$totalPages?></span>
+
     </div>
 
     <?php

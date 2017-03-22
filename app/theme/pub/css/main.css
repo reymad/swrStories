@@ -569,7 +569,11 @@ section.album {
     height: inherit; }
   section.album div.pag_clicked {
     transform: rotateY(-180deg);
-    background: #ddd; }
+    background: #fafafa;
+    opacity: 0.5; }
+    section.album div.pag_clicked:not(.pag-1) {
+      color: #fafafa;
+      background: #fafafa; }
 
 .ul-foto {
   list-style-type: none;

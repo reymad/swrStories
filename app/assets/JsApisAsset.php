@@ -17,11 +17,13 @@ use yii\web\AssetBundle;
 class JsApisAsset extends AssetBundle
 {
 
-    public $sourcePath = '@app/theme/pub/jsapis';
+    // public $sourcePath = '@app/theme/pub/jsapis';
+    public $basePath   = '@webroot';
+    public $baseUrl    = '@web';
     public $css = [];
     public $js  = [
-        'jquery/jquery.browser.js',
-        'jquery/jquery.blockUI.js',
+        'assets/dist/jsapis/jquery/jquery.browser.js',
+        'assets/dist/jsapis/jquery/jquery.blockUI.js',
         // 'cookieconsent.min.js',
         // 'sketch.min.js',
     ];
