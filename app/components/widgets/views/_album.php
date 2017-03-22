@@ -62,7 +62,7 @@ $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->fo
 
     <!-- felicitacion -->
     <div class="pag-4" style="z-index: <?=($lastPage-3)?>; overflow-y: auto;" data-zindexclosed="<?=($lastPage-3)?>" data-zindexopen="4">
-        <h4><?=Yii::t('app','Felicitación')?></h4>
+        <!--<h4><?=Yii::t('app','Felicitación')?></h4>-->
         <p>
             <?=$model->description?>
 
