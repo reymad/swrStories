@@ -46,6 +46,15 @@ body.front{
     max-height: 600px;
   }
 
+  .dani_nieve{
+    background: url($ruta-images + 'dani_nieve.jpg') no-repeat top center;
+    background-attachment: fixed;
+    background-size:contain;
+    background-position:center;
+    height: 500px;
+    width: 100%;
+  }
+
 
   // footer
   @import 'partials/_footer';
