@@ -59,7 +59,13 @@ Icon::map($this,Icon::FA);
     <div class="collage">
         <?php /* echo Html::img($this->context->imagesUrl.'collage1.jpg',['class'=>'img img-responsive']); */ ?>
     </div>
-
+<!--
+    <div class="dani_nieve">
+        <div class="container">
+            <?=Yii::t('app','site.thanks')?>
+        </div>
+    </div>
+-->
     <div class="content <?php if( isset($this->context->container) && $this->context->container===false ) echo ''; else echo 'container'; ?>">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

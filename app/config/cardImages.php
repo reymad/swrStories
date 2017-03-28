@@ -235,6 +235,18 @@ return [
         'height' => '225px',
         'width'  => '225px',
     ],
+    'confusedblackguy' => [
+        'name' => 'Confused',
+        'ruta' => '/assets/dist/images/card/confusedblackguy.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'cookie' => [
+        'name' => 'Cookie',
+        'ruta' => '/assets/dist/images/card/cookie.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
 ];
 
 ?>
