@@ -17,7 +17,7 @@ use yii\helpers\Url;
 // frontend menu
 
 NavBar::begin([
-    'brandLabel' => 'Yii Project :: Frontend',
+    'brandLabel' => '<h1 style="position: relative; bottom: 28px;">Happy<span class="text-sunset">BD</span>D</h1>',
     'brandUrl' => Yii::$app->homeUrl,
     'options' => [
         'class' => 'navbar-inverse navbar-fixed-top',
