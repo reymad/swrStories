@@ -247,6 +247,12 @@ return [
         'height' => '225px',
         'width'  => '225px',
     ],
+    'proletarioyparasito' => [
+        'name' => 'Cookie',
+        'ruta' => '/assets/dist/images/card/proletarioyparasito.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
 ];
 
 ?>
