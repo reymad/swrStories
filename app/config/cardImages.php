@@ -7,6 +7,28 @@
  */
 
 return [
+
+        'happy30' => [
+            'name' => 'Happy30',
+            'ruta' => '/assets/dist/images/card/happy30.png',
+            'height' => '225px',
+            'width'  => '225px',
+        ],
+
+    'happybdhart' => [
+        'name' => 'bdhart',
+        'ruta' => '/assets/dist/images/card/happybdhart.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+
+    'felizcumple' => [
+        'name' => 'felizcumple',
+        'ruta' => '/assets/dist/images/card/felizcumple.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+
       'alabama' => [
             'name' => 'Alabama',
             'ruta' => '/assets/dist/images/card/alabama.png',
@@ -253,6 +275,19 @@ return [
         'height' => '225px',
         'width'  => '225px',
     ],
+    'beavisbutthead' => [
+        'name' => 'beavisbutthead',
+        'ruta' => '/assets/dist/images/card/beavisbutthead.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'grumpycat' => [
+        'name' => 'Grumpy',
+        'ruta' => '/assets/dist/images/card/grumpycat.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+
 ];
 
 ?>
