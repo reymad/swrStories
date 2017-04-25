@@ -173,7 +173,7 @@ class SiteController extends MyController
 
                 // users can view public cards the timeline the day of her bd
                 $dataProvider = new ActiveDataProvider([
-                    'query' => Post::find()->where(['status' => Post::STATUS_ACTIVE, 'publico'=>1])->orderBy('created_at DESC'),
+                    'query' => Post::find()->where(['status' => Post::STATUS_ACTIVE, 'publico'=>1])->orderBy([new \yii\db\Expression('FIELD (created_by, 8, 1) DESC, created_at desc')]),
                     'pagination' => false,
                 ]);
                 return
