@@ -62,11 +62,11 @@ class Post extends MyActiveRecord
     public function rules()
     {
         return [
-            [['description','color','imagen_portada','font'], 'string'],
+            [['description','color','imagen_portada','nombre_persona','font'], 'string'],
             [['created_by', 'created_at', 'updated_at', 'status','publico'], 'integer'],
             [['lang','title','que_es','description','consejo'], 'required'],
             [['title'], 'string', 'max' => 60 /*120*/],
-            [['que_es','consejo'], 'string', 'max' => 255],
+            [['que_es','consejo','nombre_persona'], 'string', 'max' => 255],
             [['lang'], 'string', 'max' => 5],
             [['created_by'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['created_by' => 'id']],
         ];

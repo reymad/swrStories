@@ -1,7 +1,10 @@
 <?php
 
+use app\models\User;
+use yii\data\ActiveDataProvider;
 use yii\helpers\Html;
 use yii\grid\GridView;
+
 use yii\widgets\Pjax;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\search\PostSearch */
@@ -110,6 +113,72 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
     <?php Pjax::end(); ?>
 
+<hr>
+    <h3>Usuarios sin tarjeta</h3>
+    <?php Pjax::begin(); ?>
+    <?php
 
+        /* sacamos users sin tarjetas aún */
+        $dataProvider2 = new ActiveDataProvider([
+            /*
+                'query' => Post::find()
+                    ->select('u.*')
+                    ->rightJoin('user u', 'post.created_by = u.id')
+                    ->where('post.post_id is NULL'),
+            */
+            'query' => User::find()
+                    //->select('*')
+                    ->leftJoin('post p', 'p.created_by = user.id')
+                    ->where('p.post_id is NULL'),
+            'pagination' => false,
+        ]);
+
+         echo GridView::widget([
+            'dataProvider' => $dataProvider2,
+            // 'filterModel' => $searchModel,
+            'columns' => [
+                //['class' => 'yii\grid\SerialColumn'],
+                [
+                    'header' => 'User sin Tarjeta',
+                    'format'=>'raw',
+                    'value' => function ($model) {
+                        return $model->username . ' [#'.$model->id.']';;
+                    },
+                ],
+                [
+                    'attribute' => 'email',
+                    'format'=>'raw',
+                    'value' => function ($model) {
+                        return $model->email;
+                    },
+                ],
+                [
+                    'attribute' => 'created_at',
+                    'format'=>'raw',
+                    'value' => function ($model) {
+                        return Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$model->created_at]);
+                    },
+                ],
+                [
+                    'attribute' => 'updated_at',
+                    'format'=>'raw',
+                    'value' => function ($model) {
+                        return Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$model->updated_at]);
+                    },
+                ],
+                [
+                    'attribute' => 'last_login_at',
+                    'format'=>'raw',
+                    'value' => function ($model) {
+                        return ($model->last_login_at) ? Yii::t('user', '{0, date, MMMM dd, YYYY HH:mm}', [$model->last_login_at]) : 'NEVER';
+                    },
+                ],
+            ]
+        ]);
+
+    ?>
+    <?php Pjax::end(); ?>
 
 </div>
+
+
