@@ -159,7 +159,9 @@ class SiteController extends MyController
 
             // dani's provider
             $dataProvider = new ActiveDataProvider([
-                'query' => Post::find()->where(['status' => Post::STATUS_ACTIVE])->orderBy('created_at DESC'),
+                'query' => Post::find()/*->joinWith('createdBy created_by')*/
+                    ->where(['status' => Post::STATUS_ACTIVE])
+                    ->orderBy([new \yii\db\Expression('FIELD (created_by, 8, 1) DESC, created_at desc')]),
                 'pagination' => false,
             ]);
             return

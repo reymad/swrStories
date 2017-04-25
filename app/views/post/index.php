@@ -28,9 +28,23 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'title',
-            'description:ntext',
+            // 'description:ntext',
+            [
+                'attribute' => 'description',
+                'format'=>'raw',
+                'value' => function ($model) {
+                    return "<div style=\"max-height: 50px; overflow: auto;\">{$model->description}</div>";
+                },
+            ],
+
             'lang',
-            'created_by',
+            [
+                'attribute' => 'created_by',
+                'value' => function ($model) {
+                    return $model->createdBy->username . ' [#'.$model->createdBy->id.']';
+                },
+            ],
+
             [
                 'attribute' => 'created_at',
                 'value' => function ($model) {

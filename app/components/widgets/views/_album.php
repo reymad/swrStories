@@ -21,7 +21,10 @@ $createdBy = (isset($model->nombre_persona)) ? $model->nombre_persona : $model->
 $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->font . " !important;" : '' ;
 
 ?>
-<section class="album" style="<?=$font?>">
+
+<h4 class="text-center text-corp" style="margin-top: 50px;"><?=Yii::t('app','By {username}', ['username' => $createdBy])?></h4>
+<section class="album" style="<?=$font?>; margin-top: 5px; margin-bottom: 50px;">
+
     <!--portada-->
     <?php
     /*
@@ -107,9 +110,6 @@ $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->fo
 
         }
     ?>
-
-
-</section>
 
 <?php
     // para vista /post/index-user, widget property
