@@ -288,13 +288,7 @@ return [
         'width'  => '225px',
     ],
     // new ones
-    'hbhandwritten' => [
-        'name' => 'Grumpy',
-        'ruta' => '/assets/dist/images/card/hbhandwritten.png',
-        'height' => '225px',
-        'width'  => '225px',
-    ],
-    /* this one for mine */
+    /* this one for me */
     /*
     'saltbae' => [
         'name' => 'Grumpy',
@@ -303,27 +297,39 @@ return [
         'width'  => '225px',
     ],
     */
+    'hbhandwritten' => [
+        'name' => 'hbhandwritten',
+        'ruta' => '/assets/dist/images/card/hbhandwritten.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
     'rickandmortidrunk' => [
-        'name' => 'Grumpy',
+        'name' => 'rickandmortidrunk',
         'ruta' => '/assets/dist/images/card/rickandmortidrunk.png',
         'height' => '225px',
         'width'  => '225px',
     ],
     'scarface' => [
-        'name' => 'Grumpy',
+        'name' => 'scarface',
         'ruta' => '/assets/dist/images/card/scarface.png',
         'height' => '225px',
         'width'  => '225px',
     ],
     'yellow-birthdaycake' => [
-        'name' => 'Grumpy',
+        'name' => 'birthdaycake',
         'ruta' => '/assets/dist/images/card/yellow-birthdaycake.png',
         'height' => '225px',
         'width'  => '225px',
     ],
     'stephenh' => [
-        'name' => 'Grumpy',
+        'name' => 'stephenh',
         'ruta' => '/assets/dist/images/card/stephenh.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    '100' => [
+        'name' => '100',
+        'ruta' => '/assets/dist/images/card/100.png',
         'height' => '225px',
         'width'  => '225px',
     ],
