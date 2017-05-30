@@ -289,14 +289,13 @@ return [
     ],
     // new ones
     /* this one for me */
-    /*
+
     'saltbae' => [
-        'name' => 'Grumpy',
-        'ruta' => '/assets/dist/images/card/grumpycat.png',
+        'name' => 'saltbae',
+        'ruta' => '/assets/dist/images/card/saltbae.png',
         'height' => '225px',
         'width'  => '225px',
     ],
-    */
     'hbhandwritten' => [
         'name' => 'hbhandwritten',
         'ruta' => '/assets/dist/images/card/hbhandwritten.png',
@@ -330,6 +329,30 @@ return [
     '100' => [
         'name' => '100',
         'ruta' => '/assets/dist/images/card/100.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'southparkchef' => [
+        'name' => 'southparkchef',
+        'ruta' => '/assets/dist/images/card/southparkchef.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'adsy' => [
+        'name' => 'adsy',
+        'ruta' => '/assets/dist/images/card/adsy.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'llama' => [
+        'name' => 'llama',
+        'ruta' => '/assets/dist/images/card/llama.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'dino' => [
+        'name' => 'dino',
+        'ruta' => '/assets/dist/images/card/dino.png',
         'height' => '225px',
         'width'  => '225px',
     ],
