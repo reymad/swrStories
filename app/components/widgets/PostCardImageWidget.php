@@ -11,6 +11,7 @@ namespace app\components\widgets;
 
 use yii\base\Widget;
 use yii\data\ArrayDataProvider;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\web\View;
@@ -29,6 +30,21 @@ class PostCardImageWidget extends Widget
     {
 
         $this->provider = include \Yii::getAlias('@app') . '/config/cardImages.php';
+
+        if(\Yii::$app->user->can('permisos_admin')){// jesus y dani solo
+
+            $saltbaeImage = [];
+
+            $saltbaeImage['saltbae'] = [
+                'name' => 'saltbae',
+                'ruta' => '/assets/dist/images/card/saltbae.png',
+                'height' => '225px',
+                'width'  => '225px',
+            ];
+
+            $this->provider = ArrayHelper::merge($this->provider, $saltbaeImage);
+        }
+
 
         if($this->model->isNewRecord){
             $isNewRecord = 1;
