@@ -287,6 +287,47 @@ return [
         'height' => '225px',
         'width'  => '225px',
     ],
+    // new ones
+    'hbhandwritten' => [
+        'name' => 'Grumpy',
+        'ruta' => '/assets/dist/images/card/hbhandwritten.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    /* this one for mine */
+    /*
+    'saltbae' => [
+        'name' => 'Grumpy',
+        'ruta' => '/assets/dist/images/card/grumpycat.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    */
+    'rickandmortidrunk' => [
+        'name' => 'Grumpy',
+        'ruta' => '/assets/dist/images/card/rickandmortidrunk.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'scarface' => [
+        'name' => 'Grumpy',
+        'ruta' => '/assets/dist/images/card/scarface.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'yellow-birthdaycake' => [
+        'name' => 'Grumpy',
+        'ruta' => '/assets/dist/images/card/yellow-birthdaycake.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+    'stephenh' => [
+        'name' => 'Grumpy',
+        'ruta' => '/assets/dist/images/card/stephenh.png',
+        'height' => '225px',
+        'width'  => '225px',
+    ],
+
 
 ];
 

@@ -80,7 +80,7 @@ gulp.task( 'images', function() {
     return gulp.src( 'app/theme/images/**/*'  )
         .pipe( cache( imagemin( { optimizationLevel: 3, progressive: true, interlaced: true } ) ) )
         .pipe( gulp.dest( 'app/web/assets/dist/images' ) )
-        // .pipe( notify( { message: 'Images task complete' } ) );
+        .pipe( notify( { message: 'Images task complete' } ) );
 } );
 
 
