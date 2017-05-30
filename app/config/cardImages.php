@@ -289,13 +289,15 @@ return [
     ],
     // new ones
     /* this one for me */
-
+/*
     'saltbae' => [
         'name' => 'saltbae',
         'ruta' => '/assets/dist/images/card/saltbae.png',
         'height' => '225px',
         'width'  => '225px',
     ],
+*/
+
     'hbhandwritten' => [
         'name' => 'hbhandwritten',
         'ruta' => '/assets/dist/images/card/hbhandwritten.png',

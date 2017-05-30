@@ -83,6 +83,21 @@ gulp.task( 'images', function() {
         .pipe( notify( { message: 'Images task complete' } ) );
 } );
 
+// image resize;
+/*
+var imageResize = require('gulp-image-resize'),
+gulp.task('resize', function () {
+    gulp.src('app/theme/images/card/saltbae.png')
+        .pipe(imageResize({
+            width : 225,
+            height : 230,
+            crop : false,
+            upscale : true
+        }))
+        .pipe( gulp.dest('app/web/assets/dist/images') )
+        .pipe( notify( { message: 'saltbae resized!!' } ) );
+});
+*/
 
 //Watch task
 gulp.task('default', [/*'sass',*/'styles','scripts','images'], function() {
