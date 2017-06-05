@@ -95,11 +95,11 @@ return [
 Danielle is turning 30 years old this year, and for being such a good girl (most of the times), I would like you guys to dedicate her something special, so she can get a nice surprise on her birthday,
 specially from beloved people that is so far in her everyday life.',
 
-    'site.thanks.2' => 'It is quiet simple, you create a birthday card on this website and she gets the feelings on her birthday when see logs in and read them.',
+    'site.thanks.2' => 'It is quiet simple, you create a birthday card on this website and she gets the feelings on her birthday when she logs in and read them.',
 
     'site.thanks.2.1' => 'The card may be private so she will be the only one to see it or open to the rest of the users, you decide.',
 
-    'site.thanks.3' => 'September the eight, she will log in and see a timeline with all your nice cards (meanwhile, we just hope she doesn\'t have a clue about this).',
+    'site.thanks.3' => 'September the 8th, she will log in and see a timeline with all your nice cards (meanwhile, we just hope she doesn\'t have a clue about this).',
 
     'site.thanks.4' => 'Here is an example of what I am asking you to do. It\'s very easy and it won\'t take you long to make Danielle a happier person. This is the Card our cat has made for her:',
 
