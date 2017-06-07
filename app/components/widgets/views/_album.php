@@ -20,6 +20,8 @@ if($model->ficheros && count($model->ficheros)>0){
 $createdBy = (isset($model->nombre_persona)) ? $model->nombre_persona : $model->createdBy->username ;
 $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->font . " !important;" : '' ;
 
+$isMyCard = ($model->post_id==19) ? true : false;
+
 ?>
 
 <h4 class="text-center text-corp" style="margin-top: 50px;"><?=Yii::t('app','By {username}', ['username' => $createdBy])?></h4>
@@ -32,8 +34,21 @@ $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->fo
        echo Html::img($model->imagen_portada,['class'=>'img img-responsive']);
     }
     */
+    if($model->imagen_portada!=''){
+
+        if($isMyCard){
+            $backgroundImage = 'background-image: url('.$model->imagen_portada.'); background-repeat:no-repeat; background-position: center 75%;  background-image: url('.$model->imagen_portada.'), linear-gradient('.$model->color.', white); background-color:'.$model->color.';';
+        }else{
+            $backgroundImage = 'background-image: url('.$model->imagen_portada.'); background-repeat:no-repeat; background-position: center 75%;';
+        }
+
+    }else{
+        $backgroundImage='';
+    }
+/*
     $backgroundImage = ($model->imagen_portada!='') ?
-        'background-image: url('.$model->imagen_portada.'); /*background-size: 225px auto*/; background-repeat:no-repeat; background-position: center 75%;' : '';
+        'background-image: url('.$model->imagen_portada.'); background-repeat:no-repeat; background-position: center 75%;' : '';
+*/
     ?>
     <div class="pag-1" style="<?=$backgroundImage?>z-index: <?=$lastPage?>;background-color:<?=$model->color;?>" data-zindexclosed="<?=$lastPage?>" data-zindexopen="1">
         <h1><?=$model->title?></h1>

@@ -89,7 +89,7 @@ return [
 
     'site.como-funciona.question-answer.4' => 'If you are ready for this, click on the envelope:',
 
-    'site.index.welcome' => '¡Welcome to Danielle\'s 30th Birthday!',
+    'site.index.welcome' => 'Welcome to Danielle\'s 30th Birthday!',
 
     'site.thanks' => '<h1 class="question">Thank you very much for being here</h1><h3>Please, take a couple of minutes to read the following</h3><br>
 Danielle is turning 30 years old this year, and for being such a good girl (most of the times), I would like you guys to dedicate her something special, so she can get a nice surprise on her birthday,
