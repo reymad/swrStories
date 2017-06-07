@@ -82,11 +82,16 @@ class AjaxController extends MyController
 
         $error = false;
 
-        $id = Yii::$app->request->post('key');
+        if( Yii::$app->request->isPost){
+            $id = Yii::$app->request->post('key');
+        }else{
+            $id = Yii::$app->getRequest()->getQueryParam('key');;
+        }
 
         $model = Fichero::findOne(['fichero_id'=>$id]);
         $model->status = $model::STATUS_DELETED;
-        if(!$model->save()){
+        if(!$model->save(false)){
+            print_r($model->getErrors());
             $error=true;
         }
 

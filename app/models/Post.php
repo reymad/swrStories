@@ -116,7 +116,7 @@ class Post extends MyActiveRecord
     public function getFicheros(){
 
         return $this->hasMany(Fichero::className(), ['tabla_padre_id' => 'post_id'])
-            ->andOnCondition(['tabla_padre' => self::tableName()]);
+            ->andOnCondition(['tabla_padre' => self::tableName(), 'status'=>Fichero::STATUS_ACTIVE]);
 
     }
 

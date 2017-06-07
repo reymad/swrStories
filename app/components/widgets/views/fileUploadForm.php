@@ -56,7 +56,7 @@ use yii\helpers\Url;
             $fotosOptions['initialPreviewConfig'][] = [
                 'caption' => $foto->nombre_original,
                 'size'    => $foto->size,
-                'url'     => '/ajax/file-delete',
+                'url'     => '/web/ajax/file-delete',
                 'key'     => $foto->fichero_id,
             ];
         }
