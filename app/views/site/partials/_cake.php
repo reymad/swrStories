@@ -7,7 +7,7 @@
  */
 use russ666\widgets\Countdown;
 
-$showTime = ( isset($showTimeLeft) ) ? $showTimeLeft : true;
+$showTime = ( isset($showTimeLeft) ) ? $showTimeLeft : (strtotime(date('Y-m-d') >= date('2017-09-08') )) ? false  : true;
 
 ?>
 <!--

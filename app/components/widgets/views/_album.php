@@ -22,7 +22,14 @@ $font = (isset($model->font) && $model->font!='') ? "font-family: " . $model->fo
 
 $isMyCard = ($model->post_id==19) ? true : false;
 
+if($isMyCard){
+    echo '<div class="myCardDiv" style="border: 1px solid transparent;
+                                        background: url(\'/assets/dist/images/heart1.png\') center no-repeat;
+                                        background-size: 60%;">';
+}
+
 ?>
+
 
 <h4 class="text-center text-corp" style="margin-top: 50px;"><?=Yii::t('app','By {username}', ['username' => $createdBy])?></h4>
 <section class="album" style="<?=$font?> margin-top: 5px; margin-bottom: 50px;">
@@ -159,6 +166,10 @@ $isMyCard = ($model->post_id==19) ? true : false;
             Modal::end();
 
     }
+
+if($isMyCard){
+    echo '</div>';
+}
 
 ?>
 
