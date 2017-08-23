@@ -19,6 +19,18 @@ use yii\data\ActiveDataProvider;
 
     <h1 class="text-center"><?=Yii::t('dani','timeline.title',['username'=>'Danielle'])?></h1>
 
+    <!--main message-->
+
+    <p>
+        <h4 class="text-center" style="line-height: 28px;"><?=Yii::t('dani','timelime.main.message',['username'=>'Danielle'])?></h4>
+    </p>
+
+    <div class="text-center text-grey">
+        <p class="text-grey">
+            <?=Yii::t('dani','timeline.como.funciona',['username'=>'Danielle'])?>
+        </p>
+    </div>
+
     <!--albums-->
 
     <div class="album">

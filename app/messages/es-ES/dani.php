@@ -18,4 +18,8 @@
  */
 return [
     'timeline.title' => '¡Feliz cumpleaños {username}!',
+    'timelime.main.message' => 'Hoy es un gran día para ti y queremos felicitarte de una manera diferente.<br>Cuando yo cumplí 30 años me hiciste regalo que nunca olvidaré y quiero devolverte la gran experiencia
+    que tuve.<br>Eres una persona muy especial y muy querida por mucha gente, que no ha dudado en felicitarte de una manera original y personal.<br>Espero que las disfrutes y que tengas una nueva decada llena de grandes aventuras, deseos cumplidos y momentos felices.
+    <br> ¡Qué sigamos cumpliendo años juntos! Te quiero :*, Jesús.',
+    'timeline.como.funciona' => '<h1>¿Cómo funciona?</h1><br>Cada tarjeta que ves es una felicitación personal formada por cinco páginas, simplemente clica sobre ellas para pasa de página y disfrútalas.',
 ];
