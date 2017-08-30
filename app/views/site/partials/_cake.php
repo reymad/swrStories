@@ -7,7 +7,7 @@
  */
 use russ666\widgets\Countdown;
 
-$showTime = ( isset($showTimeLeft) ) ? $showTimeLeft : (strtotime(date('Y-m-d') >= date('2017-09-08') )) ? false  : true;
+$showTime = ( isset($showTimeLeft) ) ? $showTimeLeft : (strtotime(date('Y-m-d H:i:s') >= date('2017-09-09 18:00:00') )) ? false  : true;
 
 ?>
 <!--
@@ -178,7 +178,7 @@ https://twitter.com/marco_bf
     <p>
         <?php
             echo Countdown::widget([
-                'datetime' => date('2017-09-08 00:00:00'),
+                'datetime' => date('2017-09-09 18:00:00'),
                 //'format' => '%-m ' .Yii::t('app','cake.months'). ' %-W ' .Yii::t('app','cake.weeks'). ' %-d ' .Yii::t('app','cake.days'). ' &middot; %-H h. %M min. %S s.',
                 'format' => '<i>%-m</i> ' .Yii::t('app','cake.months'). ' <i>%-W</i> ' .Yii::t('app','cake.weeks'). ' <i>%-d</i> ' .Yii::t('app','cake.days'). ' &middot; <i>%-H</i> h. <i>%-M</i> min. <i>%S</i> s.',
                 'events' => [

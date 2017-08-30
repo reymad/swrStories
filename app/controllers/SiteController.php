@@ -169,7 +169,7 @@ class SiteController extends MyController
         }
         else if(Yii::$app->user->can('permisos_usuario')){
 
-            if(strtotime(date('Y-m-d'))==strtotime('2017-09-08')){
+            if(strtotime(date('Y-m-d H:i:s'))>=strtotime('2017-09-09 18:00:00')){
 
                 // users can view public cards the timeline the day of her bd
                 $dataProvider = new ActiveDataProvider([
